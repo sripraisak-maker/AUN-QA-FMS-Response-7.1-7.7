@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard AUN-QA หมวด 7 – คณะวิทยาการจัดการ มรอ.</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
+.hdr{background:linear-gradient(135deg,#062050,#1a4fa8 55%,#2563eb);position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.07);pointer-events:none}
+.hdr::after{content:'';position:absolute;bottom:-40px;left:22%;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none}
+.htop{display:flex;align-items:center;gap:14px;padding:16px 18px 10px;position:relative;z-index:2}
+.lring{width:68px;height:68px;border-radius:50%;background:#fff;padding:3px;box-shadow:0 3px 18px rgba(0,0,0,.35);flex-shrink:0}
+.lring img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.htxt h1{font-family:'Kanit',sans-serif;font-size:14px;font-weight:700;color:#fff;line-height:1.35;margin-bottom:2px}
+.htxt p{font-size:10.5px;color:rgba(255,255,255,.75);line-height:1.55}
+.htag{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 11px;font-size:10px;color:#fff;white-space:nowrap;margin-left:auto}
+.nav{display:flex;background:rgba(0,0,0,.2);position:relative;z-index:2}
+.nb{flex:1;padding:9px 2px 8px;background:none;border:none;border-bottom:3px solid transparent;color:#fff!important;font-family:'Sarabun',sans-serif;font-size:10.5px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;transition:all .15s;opacity:.65}
+.nb i{font-size:14px;font-style:normal}
+.nb.on{border-bottom-color:#60a5fa;background:rgba(255,255,255,.1);font-weight:600;opacity:1}
+.nb:hover:not(.on){opacity:.9;background:rgba(255,255,255,.06)}
+.wrap{padding:13px 13px 32px;max-width:920px;margin:0 auto}
+.pn{display:none}.pn.on{display:block}
+/* METRICS */
+.mg{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:12px}
+.mc{background:#fff;border-radius:12px;padding:13px 15px;box-shadow:0 2px 10px rgba(26,79,168,.1);border-left:4px solid #3b82f6;position:relative;overflow:hidden}
+.mc::after{content:'';position:absolute;top:-8px;right:-8px;width:44px;height:44px;border-radius:50%;background:#dbeafe;opacity:.6}
+.mc:nth-child(2){border-left-color:#7c3aed}
+.mc:nth-child(3){border-left-color:#16a34a}
+.mc:nth-child(4){border-left-color:#d97706}
+.ml{font-size:10px;color:#5a7aaa;font-weight:500;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+.mv{font-family:'Kanit',sans-serif;font-size:25px;font-weight:700;color:#0a2d5e;line-height:1}
+.ms{font-size:10px;color:#5a7aaa;margin-top:3px}
+.banner{background:linear-gradient(135deg,#1a4fa8,#2563eb);border-radius:13px;padding:13px 17px;margin-bottom:12px;color:#fff;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 18px rgba(26,79,168,.24)}
+.bnl .bll{font-size:10.5px;opacity:.82;margin-bottom:1px}
+.bsc{font-family:'Kanit',sans-serif;font-size:36px;font-weight:700;line-height:1}
+.bsb{font-size:11px;opacity:.74}
+.stars{font-size:19px}
+/* CARDS */
+.cc{background:#fff;border-radius:13px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(26,79,168,.08)}
+.cc h3{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:500;color:#0a2d5e;margin-bottom:11px;display:flex;align-items:center;gap:7px}
+.cc h3::before{content:'';width:6px;height:6px;border-radius:50%;background:#2563eb;flex-shrink:0}
+.cw{position:relative;height:195px}
+.rw{position:relative;height:225px}
+/* TABLE */
+.tt{width:100%;border-collapse:collapse;font-size:12px}
+.tt th{background:#eff6ff;color:#1a4fa8;font-weight:600;padding:7px 9px;text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.3px}
+.tt th:first-child{border-radius:7px 0 0 7px}
+.tt th:last-child{border-radius:0 7px 7px 0}
+.tt td{padding:8px 9px;border-bottom:1px solid #e8eef8;color:#0a2d5e;font-size:12px}
+.tt tr:last-child td{border-bottom:none}
+.tt tr:hover td{background:#f5f9ff}
+.bdg{display:inline-block;padding:2px 8px;border-radius:18px;font-size:10px;font-weight:700}
+.bg{background:#dcfce7;color:#166534}
+.ba{background:#fef3c7;color:#92400e}
+.br{background:#fee2e2;color:#991b1b}
+.bb{background:#dbeafe;color:#1e40af}
+.bar{height:5px;background:#e8eef8;border-radius:3px;margin-top:3px;min-width:55px}
+.bf{height:5px;border-radius:3px}
+/* PRIORITY MATRIX */
+.pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.pm-card{border-radius:12px;padding:13px 14px}
+.pm-card.critical{background:#fff0f0;border:2px solid #fca5a5}
+.pm-card.maintain{background:#f0fdf4;border:2px solid #86efac}
+.pm-card.monitor{background:#fffbeb;border:2px solid #fcd34d}
+.pm-card.review{background:#eff6ff;border:2px solid #93c5fd}
+.pm-title{font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;margin-bottom:6px}
+.pm-card.critical .pm-title{color:#dc2626}
+.pm-card.maintain .pm-title{color:#16a34a}
+.pm-card.monitor .pm-title{color:#d97706}
+.pm-card.review .pm-title{color:#2563eb}
+.pm-item{font-size:11.5px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,.06);color:#0a2d5e}
+.pm-item:last-child{border-bottom:none}
+/* IMPACT */
+.impact-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8}
+.impact-row:last-child{border-bottom:none}
+.impact-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.impact-label{font-size:12.5px;font-weight:500;color:#0a2d5e;flex:1}
+.impact-desc{font-size:11px;color:#5a7aaa}
+.impact-score{font-family:'Kanit',sans-serif;font-size:16px;font-weight:700;text-align:right}
+/* ACTION PLAN */
+.ap-row{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:8px;border:1.5px solid #e8eef8;box-shadow:0 1px 4px rgba(26,79,168,.07)}
+.ap-row:hover{border-color:#bfdbfe}
+.ap-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.ap-cat{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8}
+.ap-priority{display:flex;gap:5px;align-items:center}
+.ap-body{font-size:12px;color:#0a2d5e;line-height:1.65}
+.ap-meta{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.ap-tag{background:#eff6ff;border-radius:5px;padding:2px 8px;font-size:10.5px;color:#2d4a72}
+/* SAR */
+.sbox{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 2px 10px rgba(26,79,168,.09)}
+.sband{background:linear-gradient(135deg,#062050,#1a4fa8);padding:16px 19px;color:#fff}
+.sband h2{font-family:'Kanit',sans-serif;font-size:14px;font-weight:600;margin-bottom:3px}
+.sband p{font-size:10.5px;opacity:.78}
+.sb{padding:15px 18px}
+.st{font-family:'Kanit',sans-serif;font-size:13px;font-weight:600;color:#1a4fa8;border-left:3px solid #2563eb;padding-left:9px;margin:13px 0 7px}
+.stx{font-size:12.5px;line-height:1.8;color:#0a2d5e}
+.sl{padding-left:15px}
+.sl li{font-size:12.5px;line-height:1.8;color:#0a2d5e;margin-bottom:2px}
+.sr{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:6px;margin-bottom:4px;background:#f0f5ff;font-size:12px}
+.sr.best{background:#dcfce7}.sr.worst{background:#fef3c7}
+.sa{display:flex;gap:8px;padding:13px 18px;border-top:1px solid #e8eef8;flex-wrap:wrap}
+/* IMPORT */
+.ic{background:#fff;border-radius:13px;padding:16px;box-shadow:0 2px 8px rgba(26,79,168,.08);margin-bottom:11px}
+.ic h3{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e;margin-bottom:9px}
+.step{display:flex;align-items:flex-start;gap:11px;padding:7px 0;border-bottom:1px solid #e8eef8}
+.step:last-child{border-bottom:none}
+.sn{width:22px;height:22px;border-radius:50%;background:#1a4fa8;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sx{font-size:12.5px;color:#0a2d5e;line-height:1.6;padding-top:1px}
+.uz{border:2.5px dashed #3b82f6;border-radius:13px;background:#eff6ff;padding:24px 16px;text-align:center;cursor:pointer;transition:all .18s;margin-bottom:11px}
+.uz:hover{background:#dbeafe;border-color:#1d4ed8}
+.uzicon{font-size:30px;margin-bottom:7px}
+.uz h3{font-size:14px;font-weight:600;color:#1a4fa8;margin-bottom:5px}
+.uz p{font-size:11.5px;color:#5a7aaa;margin-bottom:10px}
+.fh{background:#eff6ff;border-radius:8px;padding:11px 13px;border-left:3px solid #3b82f6}
+.fh p{font-size:11.5px;color:#2d4a72;line-height:1.7}
+.rh{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;flex-wrap:wrap;gap:6px}
+.rh h2{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e}
+.btn{padding:8px 16px;border-radius:8px;font-family:'Sarabun',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;border:none;transition:all .18s;display:inline-flex;align-items:center;gap:5px}
+.bp{background:linear-gradient(135deg,#1a4fa8,#2563eb);color:#fff;box-shadow:0 2px 8px rgba(26,79,168,.25)}
+.bp:hover{opacity:.9}
+.bo{background:#fff;color:#1a4fa8;border:1.5px solid #3b82f6}
+.bo:hover{background:#eff6ff}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0a2d5e;color:#fff;padding:9px 20px;border-radius:20px;font-size:12.5px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999}
+.toast.show{opacity:1}
+/* AI INSIGHT */
+.ai-box{background:linear-gradient(135deg,#f0f5ff,#e8f0fe);border:1.5px solid #93c5fd;border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.ai-box h4{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ai-content{font-size:12px;color:#1e3a5f;line-height:1.75}
+/* SUGGESTIONS */
+.suggest-item{background:#fff;border-radius:9px;padding:11px 13px;margin-bottom:7px;border:1px solid #e8eef8;font-size:12.5px;color:#0a2d5e;line-height:1.65;position:relative}
+.suggest-item:hover{border-color:#bfdbfe}
+.suggest-num{display:inline-block;width:20px;height:20px;border-radius:50%;background:#eff6ff;color:#1a4fa8;font-size:10px;font-weight:700;text-align:center;line-height:20px;margin-right:7px;flex-shrink:0}
+.theme-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:18px;font-size:11.5px;font-weight:500;cursor:pointer;border:1.5px solid transparent;transition:all .15s;margin-bottom:4px}
+.theme-chip.active{border-color:#1a4fa8}
+.theme-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8}
+.theme-row:last-child{border-bottom:none}
+.theme-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.theme-body{flex:1}
+.theme-title{font-size:12.5px;font-weight:600;color:#0a2d5e;margin-bottom:2px}
+.theme-desc{font-size:11.5px;color:#5a7aaa}
+.theme-count{font-family:'Kanit',sans-serif;font-size:15px;font-weight:700;color:#1a4fa8}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="htop">
+    <div class="lring"><img src="data:image/jpeg;base64,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" alt="FMS Logo"></div>
+    <div class="htxt" style="flex:1">
+      <h1>Dashboard ความพึงพอใจ AUN-QA หมวด 7</h1>
+      <p>คณะวิทยาการจัดการ มหาวิทยาลัยราชภัฏอุตรดิตถ์ · ปีการศึกษา 2568<br>Learning Environment &amp; Support Services</p>
+    </div>
+    <div class="htag">AUN-QA v4.0</div>
+  </div>
+  <div class="nav">
+    <button class="nb on" onclick="go('dash',this)"><i>📊</i>Dashboard</button>
+    <button class="nb" onclick="go('impact',this)"><i>🎯</i>ผลกระทบ</button>
+    <button class="nb" onclick="go('priority',this)"><i>⚠️</i>Priority</button>
+    <button class="nb" onclick="go('action',this)"><i>📌</i>แผนพัฒนา</button>
+    <button class="nb" onclick="go('sar',this)"><i>📄</i>SAR</button>
+    <button class="nb" onclick="go('suggest',this)"><i>💬</i>ข้อเสนอแนะ</button>
+    <button class="nb" onclick="go('imp',this)"><i>⬆️</i>นำเข้า</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- DASHBOARD -->
+<div id="pane-dash" class="pn on">
+  <div class="mg">
+    <div class="mc"><div class="ml">ค่าเฉลี่ยรวม</div><div class="mv" id="m1">3.89</div><div class="ms">จาก 5.00 คะแนน</div></div>
+    <div class="mc"><div class="ml">ผู้ตอบแบบสอบถาม</div><div class="mv" id="m2">127</div><div class="ms">คน</div></div>
+    <div class="mc"><div class="ml">หมวดดีที่สุด</div><div class="mv" style="font-size:14px" id="m3">7.6 Staff</div><div class="ms" id="m3s">4.21 คะแนน</div></div>
+    <div class="mc"><div class="ml">ต้องเร่งแก้ไข</div><div class="mv" style="font-size:14px" id="m4">7.2 Labs</div><div class="ms" id="m4s">3.44 คะแนน</div></div>
+  </div>
+  <div class="banner">
+    <div class="bnl">
+      <div class="bll">ผลการประเมินโดยรวม AUN-QA Criterion 7</div>
+      <div class="bsc" id="bsc">3.89</div>
+      <div class="bsb">ระดับ: <strong id="blvl">มาก</strong> · ปีการศึกษา 2568</div>
+    </div>
+    <div class="stars" id="stars"></div>
+  </div>
+  <div class="cc"><h3>ค่าเฉลี่ยรายหมวด</h3><div class="cw"><canvas id="bc"></canvas></div></div>
+  <div class="cc"><h3>ภาพรวมทุกมิติ (Radar)</h3><div class="rw"><canvas id="rc"></canvas></div></div>
+  <div class="cc"><h3>สรุประดับความพึงพอใจรายหมวด</h3>
+    <table class="tt"><thead><tr><th>หมวด</th><th>รายการ</th><th>ค่าเฉลี่ย</th><th>ระดับ</th><th>สัดส่วน</th></tr></thead>
+    <tbody id="stbody"></tbody></table>
+  </div>
+</div>
+
+<!-- IMPACT ON LEARNING OUTCOMES -->
+<div id="pane-impact" class="pn">
+  <div class="rh"><h2>🎯 ผลกระทบต่อผลลัพธ์การเรียนรู้ (Learning Outcomes)</h2></div>
+  <div class="ai-box">
+    <h4>🤖 การวิเคราะห์อัตโนมัติตามเกณฑ์ AUN-QA</h4>
+    <div class="ai-content" id="ai-impact">กำลังวิเคราะห์...</div>
+  </div>
+  <div class="cc">
+    <h3>ระดับผลกระทบต่อการเรียนรู้รายหมวด</h3>
+    <div id="impact-list"></div>
+  </div>
+  <div class="cc">
+    <h3>กราฟเปรียบเทียบความพึงพอใจ vs ผลกระทบ</h3>
+    <div class="cw"><canvas id="impactChart"></canvas></div>
+  </div>
+</div>
+
+<!-- PRIORITY MATRIX -->
+<div id="pane-priority" class="pn">
+  <div class="rh"><h2>⚠️ สิ่งสนับสนุนที่ต้องได้รับการแก้ไข (Priority Matrix)</h2></div>
+  <div class="ai-box">
+    <h4>🤖 การจัดลำดับความเร่งด่วนอัตโนมัติ</h4>
+    <div class="ai-content" id="ai-priority">กำลังวิเคราะห์...</div>
+  </div>
+  <div class="pm-grid" id="pm-grid"></div>
+  <div class="cc">
+    <h3>ตารางลำดับความสำคัญ</h3>
+    <table class="tt">
+      <thead><tr><th>ลำดับ</th><th>หมวด</th><th>คะแนน</th><th>ระดับเร่งด่วน</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
+      <tbody id="priority-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ACTION PLAN -->
+<div id="pane-action" class="pn">
+  <div class="rh"><h2>📌 แผนพัฒนาและปรับปรุง</h2><button class="btn bp" onclick="copySAR()">📋 Export แผน</button></div>
+  <div class="ai-box">
+    <h4>🤖 ข้อเสนอแนะเชิงนโยบายจากผลการประเมิน</h4>
+    <div class="ai-content" id="ai-action">กำลังวิเคราะห์...</div>
+  </div>
+  <div id="action-list"></div>
+</div>
+
+<!-- SAR -->
+<div id="pane-sar" class="pn">
+  <div class="rh"><h2>📄 รายงานผล SAR</h2><button class="btn bp" onclick="copySAR()">📋 คัดลอก</button></div>
+  <div id="sarcont"></div>
+</div>
+
+<!-- IMPORT -->
+<div id="pane-imp" class="pn">
+  <div class="rh"><h2>⬆️ นำเข้าข้อมูล CSV</h2></div>
+  <div class="ic">
+    <h3>ขั้นตอนส่งออกจาก Google Sheets</h3>
+    <div class="step"><div class="sn">1</div><div class="sx">เปิด Google Sheets → ไฟล์ → ดาวน์โหลด → CSV</div></div>
+    <div class="step"><div class="sn">2</div><div class="sx">อัปโหลดไฟล์ด้านล่าง ระบบวิเคราะห์อัตโนมัติทันที</div></div>
+  </div>
+  <div class="uz" onclick="document.getElementById('csvi').click()">
+    <div class="uzicon">📂</div>
+    <h3>คลิกหรือลากไฟล์ CSV มาวางที่นี่</h3>
+    <p>รองรับ .csv จาก Google Sheets เท่านั้น</p>
+    <button class="btn bp" style="margin:0 auto">เลือกไฟล์ CSV</button>
+    <input type="file" id="csvi" accept=".csv" style="display:none" onchange="loadCSV(this)">
+  </div>
+  <div class="fh"><p><strong>รูปแบบที่รองรับ:</strong> คอลัมน์เริ่มด้วย 7.1–7.7, ค่า 1–5 (Likert)</p></div>
+</div>
+
+</div>
+<!-- SUGGESTIONS -->
+<div id="pane-suggest" class="pn">
+  <div class="rh">
+    <h2>💬 ข้อเสนอแนะจากผู้ตอบแบบสอบถาม</h2>
+  </div>
+
+  <!-- No data state -->
+  <div id="suggest-nodata" class="ai-box" style="background:#fffbeb;border-color:#fcd34d">
+    <h4 style="color:#d97706">⚠️ ยังไม่มีข้อมูลข้อเสนอแนะ</h4>
+    <div class="ai-content" style="color:#92400e">
+      กรุณานำเข้าไฟล์ CSV จาก Google Sheets ก่อน<br>
+      โดยไฟล์ต้องมีคอลัมน์ที่มีคำว่า <strong>"เสนอแนะ"</strong> หรือ <strong>"ข้อเสนอ"</strong> หรือ <strong>"suggestion"</strong> หรือ <strong>"comment"</strong>
+    </div>
+  </div>
+
+  <!-- Raw suggestions list -->
+  <div id="suggest-list-wrap" style="display:none">
+    <div class="cc">
+      <h3>ข้อเสนอแนะทั้งหมด (<span id="suggest-count">0</span> รายการ)</h3>
+      <div id="suggest-filter" style="margin-bottom:10px;display:flex;gap:6px;flex-wrap:wrap"></div>
+      <div id="suggest-list"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ สำเร็จ!</div>
+
+<script>
+const cats=[
+  {id:'7.1',name:'Physical Facilities',th:'อาคารและสิ่งอำนวยความสะดวก',avg:3.82,n:127,impactWeight:0.85,impactDesc:'ห้องเรียน พื้นที่เรียนรู้ ส่งผลต่อสมาธิและประสิทธิภาพการเรียน'},
+  {id:'7.2',name:'Laboratories',th:'ห้องปฏิบัติการและอุปกรณ์',avg:3.44,n:127,impactWeight:0.95,impactDesc:'อุปกรณ์ปฏิบัติการส่งผลโดยตรงต่อทักษะวิชาชีพ (PLO)'},
+  {id:'7.3',name:'Library Resources',th:'ทรัพยากรห้องสมุด',avg:3.91,n:127,impactWeight:0.80,impactDesc:'แหล่งเรียนรู้สนับสนุนการค้นคว้าและการคิดวิเคราะห์'},
+  {id:'7.4',name:'IT Facilities',th:'ระบบเทคโนโลยีสารสนเทศ',avg:3.76,n:127,impactWeight:0.90,impactDesc:'Wi-Fi และระบบ IT ส่งผลต่อการเรียนออนไลน์และการเข้าถึงทรัพยากร'},
+  {id:'7.5',name:'Health & Safety',th:'สุขภาพและความปลอดภัย',avg:4.08,n:127,impactWeight:0.70,impactDesc:'สภาพแวดล้อมที่ปลอดภัยส่งผลต่อความพร้อมในการเรียนรู้'},
+  {id:'7.6',name:'Staff Competence',th:'คุณภาพการให้บริการ',avg:4.21,n:127,impactWeight:0.88,impactDesc:'เจ้าหน้าที่สนับสนุนการเข้าถึงทรัพยากรและบริการอย่างมีประสิทธิภาพ'},
+  {id:'7.7',name:'Feedback & Maintenance',th:'ระบบรับข้อเสนอแนะ',avg:3.68,n:127,impactWeight:0.75,impactDesc:'การตอบสนองต่อปัญหาส่งผลต่อความต่อเนื่องในการเรียนรู้'}
+];
+
+// ACTIONS สำหรับแต่ละหมวด
+const actionPlans={
+  '7.1':{urgent:'ปรับปรุงสภาพห้องเรียน ระบบปรับอากาศ และแสงสว่าง',mid:'จัดพื้นที่การเรียนรู้เพิ่มเติมรองรับกิจกรรมกลุ่ม',owner:'ฝ่ายอาคารสถานที่',timeline:'ภาคการศึกษาถัดไป'},
+  '7.2':{urgent:'ตรวจสอบและซ่อมบำรุงอุปกรณ์ห้องปฏิบัติการที่ชำรุด',mid:'จัดหาอุปกรณ์ทันสมัยให้เพียงพอต่อจำนวนนักศึกษา',owner:'คณะ/ภาควิชา',timeline:'เร่งด่วน ภายใน 1 เดือน'},
+  '7.3':{urgent:'เพิ่มการเข้าถึงฐานข้อมูลออนไลน์',mid:'จัดชั่วโมงให้บริการห้องสมุดให้ครอบคลุมมากขึ้น',owner:'สำนักวิทยบริการ',timeline:'ภาคการศึกษาถัดไป'},
+  '7.4':{urgent:'แก้ไขจุดอับสัญญาณ Wi-Fi ในพื้นที่เรียน',mid:'อัปเกรดระบบเครือข่ายให้รองรับการใช้งานพร้อมกัน',owner:'ศูนย์คอมพิวเตอร์',timeline:'เร่งด่วน ภายใน 2 สัปดาห์'},
+  '7.5':{urgent:'ทบทวนแผนฉุกเฉินและความปลอดภัย',mid:'จัดอบรมด้านความปลอดภัยให้นักศึกษา',owner:'ฝ่ายความปลอดภัย',timeline:'ประจำปีการศึกษา'},
+  '7.6':{urgent:'จัดอบรมเพิ่มทักษะการบริการให้เจ้าหน้าที่',mid:'สร้างระบบประเมินความพึงพอใจเจ้าหน้าที่รายไตรมาส',owner:'ฝ่ายบุคลากร',timeline:'ภาคการศึกษาถัดไป'},
+  '7.7':{urgent:'สร้างช่องทางรับข้อเสนอแนะที่ชัดเจนและตอบสนองเร็ว',mid:'กำหนด SLA การแก้ไขปัญหาภายใน 72 ชั่วโมง',owner:'คณะกรรมการประกันคุณภาพ',timeline:'ภายในเดือนนี้'}
+};
+
+function lvl(v){
+  if(v>=4.5)return['bg','มากที่สุด'];
+  if(v>=3.5)return['bg','มาก'];
+  if(v>=2.5)return['ba','ปานกลาง'];
+  if(v>=1.5)return['br','น้อย'];
+  return['br','น้อยที่สุด'];
+}
+function clr(v){return v>=4.0?'#16a34a':v>=3.5?'#d97706':'#dc2626'}
+function pct(v){return Math.round((v/5)*100)}
+function stars(v){return Array.from({length:5},(_,i)=>i<Math.round(v)?'⭐':'☆').join('')}
+
+function renderSummary(){
+  document.getElementById('stbody').innerHTML=cats.map(c=>{
+    const[cls,lbl]=lvl(c.avg);
+    return'<tr><td><strong>'+c.id+'</strong></td><td>'+c.th+'</td><td><strong>'+c.avg.toFixed(2)+'</strong></td><td><span class="bdg '+cls+'">'+lbl+'</span></td><td style="min-width:65px"><div class="bar"><div class="bf" style="width:'+pct(c.avg)+'%;background:'+clr(c.avg)+'"></div></div></td></tr>';
+  }).join('');
+}
+
+function renderImpact(){
+  const sorted=[...cats].sort((a,b)=>(b.impactWeight*b.avg)-(a.impactWeight*a.avg));
+  document.getElementById('impact-list').innerHTML=sorted.map(c=>{
+    const score=(c.impactWeight*c.avg).toFixed(2);
+    const icon=c.avg>=4?'🟢':c.avg>=3.5?'🟡':'🔴';
+    return'<div class="impact-row"><div class="impact-icon" style="background:'+(c.avg>=4?'#dcfce7':c.avg>=3.5?'#fef3c7':'#fee2e2')+'">'+icon+'</div><div style="flex:1"><div class="impact-label">'+c.id+' '+c.th+'</div><div class="impact-desc">'+c.impactDesc+'</div></div><div class="impact-score" style="color:'+clr(c.avg)+'">'+score+'</div></div>';
+  }).join('');
+
+  // AI insight
+  const low=cats.filter(c=>c.avg<3.5);
+  const high=cats.filter(c=>c.avg>=4.0);
+  document.getElementById('ai-impact').innerHTML=
+    (high.length>0?'<strong>จุดแข็ง:</strong> '+high.map(c=>c.th).join(', ')+' มีคะแนนสูงและส่งผลบวกต่อการเรียนรู้อย่างมีนัยสำคัญ<br>':'') +
+    (low.length>0?'<strong>⚠️ ความเสี่ยง:</strong> '+low.map(c=>c.th).join(', ')+' มีคะแนนต่ำกว่า 3.50 ซึ่งอาจส่งผลกระทบต่อ PLO ของหลักสูตร ควรได้รับการแก้ไขเร่งด่วน':'<strong>✅ ภาพรวมดี:</strong> ทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50');
+}
+
+function renderPriority(){
+  const groups={critical:[],maintain:[],monitor:[],review:[]};
+  cats.forEach(c=>{
+    const impact=c.impactWeight;
+    if(c.avg<3.5&&impact>=0.85)groups.critical.push(c);
+    else if(c.avg>=4.0&&impact>=0.75)groups.maintain.push(c);
+    else if(c.avg<3.5&&impact<0.85)groups.monitor.push(c);
+    else groups.review.push(c);
+  });
+
+  const pmDef={
+    critical:{title:'🔴 เร่งด่วน — แก้ไขทันที',sub:'ผลกระทบสูง + คะแนนต่ำ'},
+    maintain:{title:'🟢 รักษาระดับ — จุดแข็ง',sub:'ผลกระทบสูง + คะแนนดี'},
+    monitor:{title:'🟡 ติดตาม — ระวัง',sub:'ผลกระทบปานกลาง + คะแนนต่ำ'},
+    review:{title:'🔵 ทบทวน — พัฒนาต่อ',sub:'ผลกระทบปานกลาง + คะแนนพอใช้'}
+  };
+
+  document.getElementById('pm-grid').innerHTML=Object.entries(groups).map(([key,items])=>
+    '<div class="pm-card '+key+'"><div class="pm-title">'+pmDef[key].title+'</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">'+pmDef[key].sub+'</div>'+
+    (items.length?items.map(c=>'<div class="pm-item">'+c.id+' '+c.th+' ('+c.avg.toFixed(2)+')</div>').join(''):'<div class="pm-item" style="color:#999">ไม่มีรายการ</div>')+'</div>'
+  ).join('');
+
+  // Priority table - sorted by urgency
+  const allSorted=[...cats].sort((a,b)=>{
+    const urgA=(5-a.avg)*a.impactWeight;
+    const urgB=(5-b.avg)*b.impactWeight;
+    return urgB-urgA;
+  });
+  document.getElementById('priority-tbody').innerHTML=allSorted.map((c,i)=>{
+    const urgScore=((5-c.avg)*c.impactWeight).toFixed(2);
+    const urg=c.avg<3.5&&c.impactWeight>=0.85?'<span class="bdg br">เร่งด่วนมาก</span>':
+               c.avg<3.5?'<span class="bdg ba">เร่งด่วน</span>':
+               c.avg>=4.0?'<span class="bdg bg">รักษาระดับ</span>':'<span class="bdg bb">ติดตาม</span>';
+    const action=actionPlans[c.id];
+    return'<tr><td><strong>'+(i+1)+'</strong></td><td>'+c.id+' '+c.th+'</td><td><strong>'+c.avg.toFixed(2)+'</strong></td><td>'+urg+'</td><td style="font-size:11px">'+action.urgent+'</td></tr>';
+  }).join('');
+
+  // AI priority insight
+  const crit=groups.critical;
+  document.getElementById('ai-priority').innerHTML=
+    crit.length>0?'<strong>🔴 ต้องดำเนินการทันที:</strong> '+crit.map(c=>c.th).join(', ')+' มีทั้งผลกระทบสูงและคะแนนต่ำ ควรบรรจุในแผนปฏิบัติการภาคการศึกษาถัดไปโดยเร่งด่วน':
+    '<strong>✅ ไม่มีรายการวิกฤต</strong> — ทุกหมวดที่มีผลกระทบสูงได้รับคะแนนในระดับที่ยอมรับได้';
+}
+
+function renderAction(){
+  const sorted=[...cats].sort((a,b)=>(5-a.avg)*a.impactWeight-(5-b.avg)*b.impactWeight).reverse();
+  document.getElementById('action-list').innerHTML=sorted.map(c=>{
+    const[cls,lbl]=lvl(c.avg);
+    const a=actionPlans[c.id];
+    const urg=c.avg<3.5&&c.impactWeight>=0.85?'br':c.avg<3.5?'ba':'bg';
+    const urgTxt=c.avg<3.5&&c.impactWeight>=0.85?'เร่งด่วนมาก':c.avg<3.5?'เร่งด่วน':'ต่อเนื่อง';
+    return'<div class="ap-row"><div class="ap-head"><div class="ap-cat">'+c.id+' '+c.th+' <span style="font-weight:400;color:#5a7aaa">('+c.avg.toFixed(2)+')</span></div><span class="bdg '+urg+'">'+urgTxt+'</span></div><div class="ap-body"><strong>การดำเนินการทันที:</strong> '+a.urgent+'<br><strong>แผนระยะกลาง:</strong> '+a.mid+'</div><div class="ap-meta"><span class="ap-tag">👤 '+a.owner+'</span><span class="ap-tag">📅 '+a.timeline+'</span></div></div>';
+  }).join('');
+
+  document.getElementById('ai-action').innerHTML='จากผลการประเมิน ควรให้ความสำคัญกับการพัฒนา <strong>'+sorted.filter(c=>c.avg<3.5).map(c=>c.th).join(', ')+'</strong> เป็นลำดับแรก โดยบรรจุในแผนปฏิบัติการประจำปี พร้อมกำหนดผู้รับผิดชอบและตัวชี้วัดที่ชัดเจน เพื่อรายงานความคืบหน้าต่อคณะกรรมการ AUN-QA ในรอบถัดไป';
+}
+
+function renderSAR(totalN){
+  const n=totalN||cats[0].n||127;
+  const avg=(cats.reduce((s,c)=>s+c.avg,0)/cats.length).toFixed(2);
+  const best=cats.reduce((a,b)=>a.avg>b.avg?a:b);
+  const worst=cats.reduce((a,b)=>a.avg<b.avg?a:b);
+  const critical=cats.filter(c=>c.avg<3.5&&c.impactWeight>=0.85);
+  document.getElementById('sarcont').innerHTML='<div class="sbox"><div class="sband"><h2>รายงานผลการประเมินความพึงพอใจ — AUN-QA Criterion 7</h2><p>คณะวิทยาการจัดการ · มหาวิทยาลัยราชภัฏอุตรดิตถ์ · ปีการศึกษา 2568</p></div><div class="sb"><div class="st">1. บทนำ</div><p class="stx">คณะวิทยาการจัดการดำเนินการสำรวจความพึงพอใจต่อสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค ตามเกณฑ์ AUN-QA Version 4.0 หมวด 7 มีผู้ตอบ '+n+' คน ปีการศึกษา 2568</p><div class="st">2. ผลการประเมิน</div><p class="stx" style="margin-bottom:8px">ค่าเฉลี่ยรวม <strong>'+avg+'</strong> จาก 5.00 (ระดับ<strong>'+lvl(parseFloat(avg))[1]+'</strong>)</p>'+cats.map(c=>{const[cls,lbl]=lvl(c.avg);return'<div class="sr'+(c.id===best.id?' best':c.id===worst.id?' worst':'')+'"><span>'+c.id+' '+c.th+'</span><span><strong>'+c.avg.toFixed(2)+'</strong> <span class="bdg '+cls+'">'+lbl+'</span></span></div>';}).join('')+'<div class="st">3. ผลกระทบต่อผลลัพธ์การเรียนรู้</div><ul class="sl">'+cats.map(c=>'<li><strong>'+c.id+'</strong> '+c.impactDesc+'</li>').join('')+'</ul><div class="st">4. จุดแข็งและจุดที่ต้องพัฒนา</div><ul class="sl"><li>จุดแข็ง: <strong>'+best.id+' '+best.th+'</strong> ('+best.avg.toFixed(2)+' คะแนน)</li><li>ต้องเร่งพัฒนา: <strong>'+worst.id+' '+worst.th+'</strong> ('+worst.avg.toFixed(2)+' คะแนน)</li>'+(critical.length?'<li>รายการวิกฤต: '+critical.map(c=>c.th).join(', ')+'</li>':'')+'</ul><div class="st">5. แผนพัฒนา</div><ul class="sl">'+cats.filter(c=>c.avg<3.5).map(c=>'<li><strong>'+c.id+' '+c.th+':</strong> '+actionPlans[c.id].urgent+' ('+actionPlans[c.id].timeline+')</li>').join('')+'<li>ติดตามผลการพัฒนาทุกภาคการศึกษา</li></ul></div><div class="sa"><button class="btn bp" onclick="copySAR()">📋 คัดลอก</button></div></div>';
+}
+
+function updateMetrics(totalN){
+  const avg=cats.reduce((s,c)=>s+c.avg,0)/cats.length;
+  const best=cats.reduce((a,b)=>a.avg>b.avg?a:b);
+  const worst=cats.reduce((a,b)=>a.avg<b.avg?a:b);
+  document.getElementById('m1').textContent=avg.toFixed(2);
+  if(totalN!==undefined)document.getElementById('m2').textContent=totalN;
+  document.getElementById('m3').textContent=best.id+' '+best.name.split(' ')[0];
+  document.getElementById('m3s').textContent=best.avg.toFixed(2)+' คะแนน';
+  document.getElementById('m4').textContent=worst.id+' '+worst.name.split(' ')[0];
+  document.getElementById('m4s').textContent=worst.avg.toFixed(2)+' คะแนน';
+  document.getElementById('bsc').textContent=avg.toFixed(2);
+  document.getElementById('blvl').textContent=lvl(avg)[1];
+  document.getElementById('stars').textContent=stars(avg);
+}
+
+let BC,RC,IC;
+function initCharts(){
+  const lbls=cats.map(c=>c.id);
+  const avgs=cats.map(c=>c.avg);
+  const cols=avgs.map(v=>v>=4?'#16a34a':v>=3.5?'#d97706':'#dc2626');
+  if(BC)BC.destroy();
+  BC=new Chart(document.getElementById('bc'),{type:'bar',data:{labels:lbls,datasets:[{label:'ค่าเฉลี่ย',data:avgs,backgroundColor:cols,borderRadius:5,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{min:0,max:5,ticks:{stepSize:1,font:{size:11},color:'#5a7aaa'},grid:{color:'rgba(0,0,0,0.04)'}},x:{ticks:{font:{size:11},color:'#5a7aaa'},grid:{display:false}}}}});
+  if(RC)RC.destroy();
+  RC=new Chart(document.getElementById('rc'),{type:'radar',data:{labels:cats.map(c=>c.id+' '+c.name.split(' ')[0]),datasets:[{data:avgs,backgroundColor:'rgba(37,99,235,0.12)',borderColor:'#2563eb',borderWidth:2,pointBackgroundColor:cols,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9},color:'#5a7aaa',backdropColor:'transparent'},grid:{color:'rgba(0,0,0,0.07)'},pointLabels:{font:{size:9.5},color:'#2d4a72'}}}}});
+}
+
+function initImpactChart(){
+  if(IC)IC.destroy();
+  IC=new Chart(document.getElementById('impactChart'),{
+    type:'bar',
+    data:{labels:cats.map(c=>c.id),datasets:[
+      {label:'ค่าเฉลี่ยความพึงพอใจ',data:cats.map(c=>c.avg),backgroundColor:'rgba(37,99,235,0.7)',borderRadius:4},
+      {label:'น้ำหนักผลกระทบ×5',data:cats.map(c=>parseFloat((c.impactWeight*5).toFixed(2))),backgroundColor:'rgba(220,38,38,0.5)',borderRadius:4}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12}}},scales:{y:{min:0,max:5,ticks:{font:{size:10},color:'#5a7aaa'}},x:{ticks:{font:{size:10},color:'#5a7aaa'}}}}
+  });
+}
+
+function go(id,el){
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.pn').forEach(p=>p.classList.remove('on'));
+  document.getElementById('pane-'+id).classList.add('on');
+  if(id==='dash')setTimeout(initCharts,60);
+  if(id==='impact'){renderImpact();setTimeout(initImpactChart,60);}
+  if(id==='priority')renderPriority();
+  if(id==='action')renderAction();
+  if(id==='sar')renderSAR();
+  if(id==='suggest')showSuggestData();
+}
+
+function copySAR(){
+  navigator.clipboard.writeText(document.getElementById('sarcont')?.innerText||document.getElementById('action-list')?.innerText||'').then(()=>{
+    const t=document.getElementById('toast');
+    t.textContent='✅ คัดลอกแล้ว!';t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2200);
+  });
+}
+
+function loadCSV(input){
+  const file=input.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    const rows=e.target.result.split('\n').filter(x=>x.trim());
+    const hdrs=rows[0].split(',');
+    const data=rows.slice(1).filter(x=>x.trim());
+    const totalN=data.length;
+    // Detect suggestion column
+    const sugCol = detectSuggestCol(hdrs);
+    if (sugCol >= 0) {
+      allSuggestions = data.map(row => row.split(',')[sugCol] || '').map(s=>s.replace(/^"|"$/g,'').trim()).filter(s=>s.length>2);
+    }
+    showSuggestData();
+    cats.forEach(cat=>{
+      const cols=hdrs.map((h,i)=>h.includes(cat.id)?i:-1).filter(i=>i>=0);
+      if(!cols.length)return;
+      let s=0,n=0;
+      data.forEach(row=>{const vs=row.split(',');cols.forEach(ci=>{const v=parseFloat(vs[ci]);if(!isNaN(v)&&v>=1&&v<=5){s+=v;n++;}});});
+      if(n>0){cat.avg=Math.round((s/n)*100)/100;cat.n=totalN;}
+    });
+    updateMetrics(totalN);renderSummary();renderSAR(totalN);
+    go('dash',document.querySelectorAll('.nb')[0]);
+    const t=document.getElementById('toast');
+    t.textContent='✅ นำเข้าสำเร็จ! พบ '+totalN+' คน';
+    t.classList.add('show');setTimeout(()=>{t.classList.remove('show');},2800);
+  };
+  r.readAsText(file,'UTF-8');
+}
+
+// ===== SUGGESTIONS =====
+let allSuggestions = [];
+let activeTheme = 'all';
+
+function detectSuggestCol(headers) {
+  const keywords = ['เสนอแนะ','ข้อเสนอ','ความคิดเห็น','suggestion','comment','opinion','other','อื่นๆ','เพิ่มเติม'];
+  return headers.findIndex(h => keywords.some(k => h.toLowerCase().includes(k)));
+}
+
+function renderSuggestions(filter) {
+  activeTheme = filter || 'all';
+  const items = filter === 'all' ? allSuggestions : allSuggestions.filter(s => s.toLowerCase().includes(filter));
+  const list = document.getElementById('suggest-list');
+  if (!items.length) { list.innerHTML = '<div style="color:#5a7aaa;font-size:12px;padding:8px 0">ไม่พบข้อเสนอแนะในหมวดนี้</div>'; return; }
+  list.innerHTML = items.map((s,i) =>
+    '<div class="suggest-item"><span class="suggest-num">'+(i+1)+'</span>'+escHtml(s)+'</div>'
+  ).join('');
+  document.querySelectorAll('.theme-chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.filter === activeTheme);
+  });
+}
+
+function escHtml(t){ return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function showSuggestData() {
+  const nodata = document.getElementById('suggest-nodata');
+  const listWrap = document.getElementById('suggest-list-wrap');
+  if (allSuggestions.length === 0) {
+    nodata.style.display = 'block'; listWrap.style.display = 'none';
+  } else {
+    nodata.style.display = 'none'; listWrap.style.display = 'block';
+    document.getElementById('suggest-count').textContent = allSuggestions.length;
+    const filter = document.getElementById('suggest-filter');
+    filter.innerHTML = [
+      {label:'ทั้งหมด ('+allSuggestions.length+')',f:'all',bg:'#eff6ff',col:'#1a4fa8'},
+      {label:'🔴 อุปกรณ์/ห้อง',f:'ห้อง',bg:'#fee2e2',col:'#dc2626'},
+      {label:'🌐 อินเทอร์เน็ต',f:'wifi',bg:'#fef3c7',col:'#d97706'},
+      {label:'📚 ห้องสมุด',f:'ห้องสมุด',bg:'#dcfce7',col:'#16a34a'},
+      {label:'👤 เจ้าหน้าที่',f:'เจ้าหน้าที่',bg:'#dbeafe',col:'#1a4fa8'}
+    ].map(t=>'<span class="theme-chip'+(t.f==='all'?' active':'')+'" data-filter="'+t.f+'" style="background:'+t.bg+';color:'+t.col+'" onclick="renderSuggestions(\''+t.f+'\')">'+t.label+'</span>').join('');
+    renderSuggestions('all');
+  }
+}
+
+// ===== END SUGGESTIONS =====
+
+// Init
+renderSummary();renderSAR();updateMetrics();showSuggestData();
+setTimeout(initCharts,150);
+</script>
+</body>
+</html>
