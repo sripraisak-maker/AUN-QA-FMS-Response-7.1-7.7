@@ -25,7 +25,6 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .nb:hover:not(.on){opacity:.9;background:rgba(255,255,255,.06)}
 .wrap{padding:13px 13px 32px;max-width:920px;margin:0 auto}
 .pn{display:none}.pn.on{display:block}
-/* METRICS */
 .mg{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:12px}
 .mc{background:#fff;border-radius:12px;padding:13px 15px;box-shadow:0 2px 10px rgba(26,79,168,.1);border-left:4px solid #3b82f6;position:relative;overflow:hidden}
 .mc::after{content:'';position:absolute;top:-8px;right:-8px;width:44px;height:44px;border-radius:50%;background:#dbeafe;opacity:.6}
@@ -40,28 +39,20 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .bsc{font-family:'Kanit',sans-serif;font-size:36px;font-weight:700;line-height:1}
 .bsb{font-size:11px;opacity:.74}
 .stars{font-size:19px}
-/* CARDS */
 .cc{background:#fff;border-radius:13px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(26,79,168,.08)}
 .cc h3{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:500;color:#0a2d5e;margin-bottom:11px;display:flex;align-items:center;gap:7px}
 .cc h3::before{content:'';width:6px;height:6px;border-radius:50%;background:#2563eb;flex-shrink:0}
 .cw{position:relative;height:195px}
 .rw{position:relative;height:225px}
-/* TABLE */
 .tt{width:100%;border-collapse:collapse;font-size:12px}
 .tt th{background:#eff6ff;color:#1a4fa8;font-weight:600;padding:7px 9px;text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.3px}
-.tt th:first-child{border-radius:7px 0 0 7px}
-.tt th:last-child{border-radius:0 7px 7px 0}
+.tt th:first-child{border-radius:7px 0 0 7px}.tt th:last-child{border-radius:0 7px 7px 0}
 .tt td{padding:8px 9px;border-bottom:1px solid #e8eef8;color:#0a2d5e;font-size:12px}
-.tt tr:last-child td{border-bottom:none}
-.tt tr:hover td{background:#f5f9ff}
+.tt tr:last-child td{border-bottom:none}.tt tr:hover td{background:#f5f9ff}
 .bdg{display:inline-block;padding:2px 8px;border-radius:18px;font-size:10px;font-weight:700}
-.bg{background:#dcfce7;color:#166534}
-.ba{background:#fef3c7;color:#92400e}
-.br{background:#fee2e2;color:#991b1b}
-.bb{background:#dbeafe;color:#1e40af}
+.bg{background:#dcfce7;color:#166534}.ba{background:#fef3c7;color:#92400e}.br{background:#fee2e2;color:#991b1b}.bb{background:#dbeafe;color:#1e40af}
 .bar{height:5px;background:#e8eef8;border-radius:3px;margin-top:3px;min-width:55px}
 .bf{height:5px;border-radius:3px}
-/* PRIORITY MATRIX */
 .pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
 .pm-card{border-radius:12px;padding:13px 14px}
 .pm-card.critical{background:#fff0f0;border:2px solid #fca5a5}
@@ -69,29 +60,20 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .pm-card.monitor{background:#fffbeb;border:2px solid #fcd34d}
 .pm-card.review{background:#eff6ff;border:2px solid #93c5fd}
 .pm-title{font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;margin-bottom:6px}
-.pm-card.critical .pm-title{color:#dc2626}
-.pm-card.maintain .pm-title{color:#16a34a}
-.pm-card.monitor .pm-title{color:#d97706}
-.pm-card.review .pm-title{color:#2563eb}
+.pm-card.critical .pm-title{color:#dc2626}.pm-card.maintain .pm-title{color:#16a34a}
+.pm-card.monitor .pm-title{color:#d97706}.pm-card.review .pm-title{color:#2563eb}
 .pm-item{font-size:11.5px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,.06);color:#0a2d5e}
 .pm-item:last-child{border-bottom:none}
-/* IMPACT */
 .impact-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8}
 .impact-row:last-child{border-bottom:none}
 .impact-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-.impact-label{font-size:12.5px;font-weight:500;color:#0a2d5e;flex:1}
-.impact-desc{font-size:11px;color:#5a7aaa}
-.impact-score{font-family:'Kanit',sans-serif;font-size:16px;font-weight:700;text-align:right}
-/* ACTION PLAN */
 .ap-row{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:8px;border:1.5px solid #e8eef8;box-shadow:0 1px 4px rgba(26,79,168,.07)}
 .ap-row:hover{border-color:#bfdbfe}
 .ap-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
 .ap-cat{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8}
-.ap-priority{display:flex;gap:5px;align-items:center}
 .ap-body{font-size:12px;color:#0a2d5e;line-height:1.65}
 .ap-meta{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .ap-tag{background:#eff6ff;border-radius:5px;padding:2px 8px;font-size:10.5px;color:#2d4a72}
-/* SAR */
 .sbox{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 2px 10px rgba(26,79,168,.09)}
 .sband{background:linear-gradient(135deg,#062050,#1a4fa8);padding:16px 19px;color:#fff}
 .sband h2{font-family:'Kanit',sans-serif;font-size:14px;font-weight:600;margin-bottom:3px}
@@ -104,46 +86,33 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .sr{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:6px;margin-bottom:4px;background:#f0f5ff;font-size:12px}
 .sr.best{background:#dcfce7}.sr.worst{background:#fef3c7}
 .sa{display:flex;gap:8px;padding:13px 18px;border-top:1px solid #e8eef8;flex-wrap:wrap}
-/* IMPORT */
 .ic{background:#fff;border-radius:13px;padding:16px;box-shadow:0 2px 8px rgba(26,79,168,.08);margin-bottom:11px}
 .ic h3{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e;margin-bottom:9px}
 .step{display:flex;align-items:flex-start;gap:11px;padding:7px 0;border-bottom:1px solid #e8eef8}
 .step:last-child{border-bottom:none}
 .sn{width:22px;height:22px;border-radius:50%;background:#1a4fa8;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .sx{font-size:12.5px;color:#0a2d5e;line-height:1.6;padding-top:1px}
-.uz{border:2.5px dashed #3b82f6;border-radius:13px;background:#eff6ff;padding:24px 16px;text-align:center;cursor:pointer;transition:all .18s;margin-bottom:11px}
-.uz:hover{background:#dbeafe;border-color:#1d4ed8}
-.uzicon{font-size:30px;margin-bottom:7px}
-.uz h3{font-size:14px;font-weight:600;color:#1a4fa8;margin-bottom:5px}
-.uz p{font-size:11.5px;color:#5a7aaa;margin-bottom:10px}
-.fh{background:#eff6ff;border-radius:8px;padding:11px 13px;border-left:3px solid #3b82f6}
-.fh p{font-size:11.5px;color:#2d4a72;line-height:1.7}
 .rh{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;flex-wrap:wrap;gap:6px}
 .rh h2{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e}
 .btn{padding:8px 16px;border-radius:8px;font-family:'Sarabun',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;border:none;transition:all .18s;display:inline-flex;align-items:center;gap:5px}
 .bp{background:linear-gradient(135deg,#1a4fa8,#2563eb);color:#fff;box-shadow:0 2px 8px rgba(26,79,168,.25)}
-.bp:hover{opacity:.9}
-.bo{background:#fff;color:#1a4fa8;border:1.5px solid #3b82f6}
-.bo:hover{background:#eff6ff}
-.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0a2d5e;color:#fff;padding:9px 20px;border-radius:20px;font-size:12.5px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999}
-.toast.show{opacity:1}
-/* AI INSIGHT */
+.bp:hover{opacity:.9}.bo{background:#fff;color:#1a4fa8;border:1.5px solid #3b82f6}.bo:hover{background:#eff6ff}
 .ai-box{background:linear-gradient(135deg,#f0f5ff,#e8f0fe);border:1.5px solid #93c5fd;border-radius:12px;padding:14px 16px;margin-bottom:12px}
 .ai-box h4{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8;margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .ai-content{font-size:12px;color:#1e3a5f;line-height:1.75}
-/* SUGGESTIONS */
-.suggest-item{background:#fff;border-radius:9px;padding:11px 13px;margin-bottom:7px;border:1px solid #e8eef8;font-size:12.5px;color:#0a2d5e;line-height:1.65;position:relative}
+.suggest-item{background:#fff;border-radius:9px;padding:11px 13px;margin-bottom:7px;border:1px solid #e8eef8;font-size:12.5px;color:#0a2d5e;line-height:1.65}
 .suggest-item:hover{border-color:#bfdbfe}
-.suggest-num{display:inline-block;width:20px;height:20px;border-radius:50%;background:#eff6ff;color:#1a4fa8;font-size:10px;font-weight:700;text-align:center;line-height:20px;margin-right:7px;flex-shrink:0}
+.snum{display:inline-block;width:20px;height:20px;border-radius:50%;background:#eff6ff;color:#1a4fa8;font-size:10px;font-weight:700;text-align:center;line-height:20px;margin-right:7px}
 .theme-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:18px;font-size:11.5px;font-weight:500;cursor:pointer;border:1.5px solid transparent;transition:all .15s;margin-bottom:4px}
 .theme-chip.active{border-color:#1a4fa8}
-.theme-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8}
-.theme-row:last-child{border-bottom:none}
-.theme-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
-.theme-body{flex:1}
-.theme-title{font-size:12.5px;font-weight:600;color:#0a2d5e;margin-bottom:2px}
-.theme-desc{font-size:11.5px;color:#5a7aaa}
-.theme-count{font-family:'Kanit',sans-serif;font-size:15px;font-weight:700;color:#1a4fa8}
+.improve-bar{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #e8eef8}
+.improve-bar:last-child{border-bottom:none}
+.improve-label{font-size:12px;color:#0a2d5e;min-width:150px}
+.improve-track{flex:1;height:8px;background:#e8eef8;border-radius:4px}
+.improve-fill{height:8px;border-radius:4px;background:linear-gradient(90deg,#1a4fa8,#3b82f6)}
+.improve-count{font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;color:#1a4fa8;min-width:35px;text-align:right}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0a2d5e;color:#fff;padding:9px 20px;border-radius:20px;font-size:12.5px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999}
+.toast.show{opacity:1}
 </style>
 </head>
 <body>
@@ -161,292 +130,258 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
     <button class="nb" onclick="go('impact',this)"><i>🎯</i>ผลกระทบ</button>
     <button class="nb" onclick="go('priority',this)"><i>⚠️</i>Priority</button>
     <button class="nb" onclick="go('action',this)"><i>📌</i>แผนพัฒนา</button>
-    <button class="nb" onclick="go('sar',this)"><i>📄</i>SAR</button>
     <button class="nb" onclick="go('suggest',this)"><i>💬</i>ข้อเสนอแนะ</button>
-    <button class="nb" onclick="go('imp',this)"><i>⬆️</i>นำเข้า</button>
+    <button class="nb" onclick="go('sar',this)"><i>📄</i>SAR</button>
   </div>
 </div>
-
 <div class="wrap">
-
 <!-- DASHBOARD -->
 <div id="pane-dash" class="pn on">
   <div class="mg">
-    <div class="mc"><div class="ml">ค่าเฉลี่ยรวม</div><div class="mv" id="m1">3.89</div><div class="ms">จาก 5.00 คะแนน</div></div>
-    <div class="mc"><div class="ml">ผู้ตอบแบบสอบถาม</div><div class="mv" id="m2">127</div><div class="ms">คน</div></div>
-    <div class="mc"><div class="ml">หมวดดีที่สุด</div><div class="mv" style="font-size:14px" id="m3">7.6 Staff</div><div class="ms" id="m3s">4.21 คะแนน</div></div>
-    <div class="mc"><div class="ml">ต้องเร่งแก้ไข</div><div class="mv" style="font-size:14px" id="m4">7.2 Labs</div><div class="ms" id="m4s">3.44 คะแนน</div></div>
+    <div class="mc"><div class="ml">ค่าเฉลี่ยรวม (AUN-QA 7)</div><div class="mv">4.07</div><div class="ms">จาก 5.00 คะแนน</div></div>
+    <div class="mc"><div class="ml">ผู้ตอบแบบสอบถาม</div><div class="mv">248</div><div class="ms">นักศึกษา 231 · อาจารย์ 11 · บุคลากร 6</div></div>
+    <div class="mc"><div class="ml">หมวดดีที่สุด</div><div class="mv" style="font-size:14px">7.5 Safety</div><div class="ms">4.21 คะแนน</div></div>
+    <div class="mc"><div class="ml">ต้องพัฒนา</div><div class="mv" style="font-size:14px">7.4 IT/Wi-Fi</div><div class="ms">3.89 คะแนน</div></div>
   </div>
   <div class="banner">
     <div class="bnl">
-      <div class="bll">ผลการประเมินโดยรวม AUN-QA Criterion 7</div>
-      <div class="bsc" id="bsc">3.89</div>
-      <div class="bsb">ระดับ: <strong id="blvl">มาก</strong> · ปีการศึกษา 2568</div>
+      <div class="bll">ผลการประเมินโดยรวม · ความพึงพอใจโดยรวม (ข้อ 18)</div>
+      <div class="bsc">4.18</div>
+      <div class="bsb">ระดับ: <strong>มาก</strong> · ปีการศึกษา 2568 · ผลกระทบต่อการเรียนรู้: 4.13/5.00</div>
     </div>
-    <div class="stars" id="stars"></div>
+    <div class="stars">⭐⭐⭐⭐☆</div>
   </div>
-  <div class="cc"><h3>ค่าเฉลี่ยรายหมวด</h3><div class="cw"><canvas id="bc"></canvas></div></div>
-  <div class="cc"><h3>ภาพรวมทุกมิติ (Radar)</h3><div class="rw"><canvas id="rc"></canvas></div></div>
+  <div class="cc"><h3>ค่าเฉลี่ยรายหมวด AUN-QA 7.1–7.7</h3><div class="cw"><canvas id="bc"></canvas></div></div>
+  <div class="cc"><h3>ภาพรวมทุกมิติ (Radar Chart)</h3><div class="rw"><canvas id="rc"></canvas></div></div>
   <div class="cc"><h3>สรุประดับความพึงพอใจรายหมวด</h3>
     <table class="tt"><thead><tr><th>หมวด</th><th>รายการ</th><th>ค่าเฉลี่ย</th><th>ระดับ</th><th>สัดส่วน</th></tr></thead>
-    <tbody id="stbody"></tbody></table>
+    <tbody>
+      <tr><td><strong>7.1</strong></td><td>อาคารและสิ่งอำนวยความสะดวก</td><td><strong>4.05</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:81%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.2</strong></td><td>ห้องปฏิบัติการและอุปกรณ์</td><td><strong>4.04</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:81%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.3</strong></td><td>ทรัพยากรห้องสมุด</td><td><strong>3.96</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:79%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.4</strong></td><td>ระบบเทคโนโลยีสารสนเทศ</td><td><strong>3.89</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:78%;background:#d97706"></div></div></td></tr>
+      <tr><td><strong>7.5</strong></td><td>สุขภาพและความปลอดภัย</td><td><strong>4.21</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:84%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.6</strong></td><td>คุณภาพการให้บริการ</td><td><strong>4.14</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:83%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.7</strong></td><td>ระบบรับข้อเสนอแนะและซ่อมบำรุง</td><td><strong>4.09</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:82%;background:#16a34a"></div></div></td></tr>
+    </tbody></table>
   </div>
 </div>
 
-<!-- IMPACT ON LEARNING OUTCOMES -->
+<!-- IMPACT -->
 <div id="pane-impact" class="pn">
-  <div class="rh"><h2>🎯 ผลกระทบต่อผลลัพธ์การเรียนรู้ (Learning Outcomes)</h2></div>
+  <div class="rh"><h2>🎯 ผลกระทบต่อผลลัพธ์การเรียนรู้</h2></div>
   <div class="ai-box">
-    <h4>🤖 การวิเคราะห์อัตโนมัติตามเกณฑ์ AUN-QA</h4>
-    <div class="ai-content" id="ai-impact">กำลังวิเคราะห์...</div>
+    <h4>📊 การวิเคราะห์ตามเกณฑ์ AUN-QA Criterion 7</h4>
+    <div class="ai-content">
+      <strong>ภาพรวม:</strong> ทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน สะท้อนว่าสิ่งสนับสนุนการเรียนรู้โดยรวมเอื้อต่อผลลัพธ์การเรียนรู้<br><br>
+      <strong>ผลกระทบสูงสุด:</strong> 7.5 ความปลอดภัย (4.21) และ 7.6 คุณภาพบุคลากร (4.14) — ส่งผลบวกโดยตรงต่อความพร้อมและประสิทธิภาพการเรียน<br><br>
+      <strong>⚠️ ความเสี่ยง:</strong> 7.4 ระบบ IT/Wi-Fi (3.89) เป็นหมวดที่มีคะแนนต่ำสุด ซึ่งในยุคการเรียนรู้ดิจิทัลส่งผลโดยตรงต่อการเข้าถึงทรัพยากรและ E-Learning<br><br>
+      <strong>ค่าเฉลี่ยผลกระทบต่อการเรียนรู้ (ข้อ 14–16):</strong> 4.13/5.00 — นักศึกษาเห็นว่าสิ่งสนับสนุนช่วยให้การเรียนมีประสิทธิภาพมากขึ้นในระดับมาก
+    </div>
   </div>
   <div class="cc">
     <h3>ระดับผลกระทบต่อการเรียนรู้รายหมวด</h3>
-    <div id="impact-list"></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.5 สุขภาพและความปลอดภัย</div><div style="font-size:11px;color:#5a7aaa">สภาพแวดล้อมปลอดภัยส่งผลต่อความพร้อมในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.21</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.6 คุณภาพการให้บริการ</div><div style="font-size:11px;color:#5a7aaa">บุคลากรสนับสนุนการเข้าถึงทรัพยากรอย่างมีประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.14</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.7 ระบบรับข้อเสนอแนะ</div><div style="font-size:11px;color:#5a7aaa">การตอบสนองปัญหาส่งผลต่อความต่อเนื่องในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.09</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.1 อาคารและสิ่งอำนวยความสะดวก</div><div style="font-size:11px;color:#5a7aaa">ห้องเรียน พื้นที่เรียนรู้ ส่งผลต่อสมาธิและประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.05</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.2 ห้องปฏิบัติการและอุปกรณ์</div><div style="font-size:11px;color:#5a7aaa">อุปกรณ์ปฏิบัติการส่งผลโดยตรงต่อทักษะวิชาชีพ (PLO)</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.04</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.3 ทรัพยากรห้องสมุด</div><div style="font-size:11px;color:#5a7aaa">แหล่งเรียนรู้สนับสนุนการค้นคว้าและการคิดวิเคราะห์</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">3.96</div></div>
+    <div class="impact-row"><div class="impact-icon" style="background:#fef3c7">🟡</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.4 ระบบเทคโนโลยีสารสนเทศ</div><div style="font-size:11px;color:#5a7aaa">Wi-Fi และระบบ IT ส่งผลต่อการเรียนออนไลน์และการเข้าถึงทรัพยากร</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#d97706">3.89</div></div>
   </div>
-  <div class="cc">
-    <h3>กราฟเปรียบเทียบความพึงพอใจ vs ผลกระทบ</h3>
-    <div class="cw"><canvas id="impactChart"></canvas></div>
-  </div>
+  <div class="cc"><h3>กราฟเปรียบเทียบ</h3><div class="cw"><canvas id="impactChart"></canvas></div></div>
 </div>
 
-<!-- PRIORITY MATRIX -->
+<!-- PRIORITY -->
 <div id="pane-priority" class="pn">
   <div class="rh"><h2>⚠️ สิ่งสนับสนุนที่ต้องได้รับการแก้ไข (Priority Matrix)</h2></div>
   <div class="ai-box">
-    <h4>🤖 การจัดลำดับความเร่งด่วนอัตโนมัติ</h4>
-    <div class="ai-content" id="ai-priority">กำลังวิเคราะห์...</div>
+    <h4>📊 การจัดลำดับความเร่งด่วน</h4>
+    <div class="ai-content"><strong>✅ ไม่มีรายการวิกฤต</strong> — ทุกหมวดผ่านเกณฑ์ 3.50 แต่ <strong>7.4 ระบบ IT/Wi-Fi</strong> มีคะแนนต่ำสุด (3.89) และเป็นหมวดที่ผู้ตอบแบบสอบถามเลือกให้ปรับปรุงมากที่สุด (ระบบอินเทอร์เน็ต 166 คน จาก 248 คน = 67%) ควรดำเนินการเร่งด่วน</div>
   </div>
-  <div class="pm-grid" id="pm-grid"></div>
-  <div class="cc">
-    <h3>ตารางลำดับความสำคัญ</h3>
-    <table class="tt">
-      <thead><tr><th>ลำดับ</th><th>หมวด</th><th>คะแนน</th><th>ระดับเร่งด่วน</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
-      <tbody id="priority-tbody"></tbody>
-    </table>
+  <div class="pm-grid">
+    <div class="pm-card critical">
+      <div class="pm-title">🔴 เร่งด่วน — ผลกระทบสูง+คะแนนต่ำ</div>
+      <div style="font-size:10.5px;color:#666;margin-bottom:6px">ต้องดำเนินการทันที</div>
+      <div class="pm-item">7.4 IT/Wi-Fi (3.89) — ผู้ตอบ 67% ต้องการปรับปรุง</div>
+    </div>
+    <div class="pm-card maintain">
+      <div class="pm-title">🟢 รักษาระดับ — จุดแข็ง</div>
+      <div style="font-size:10.5px;color:#666;margin-bottom:6px">คงระดับและพัฒนาต่อเนื่อง</div>
+      <div class="pm-item">7.5 Safety (4.21)</div>
+      <div class="pm-item">7.6 Staff (4.14)</div>
+      <div class="pm-item">7.7 Feedback (4.09)</div>
+    </div>
+    <div class="pm-card monitor">
+      <div class="pm-title">🟡 ติดตาม — พัฒนาต่อ</div>
+      <div style="font-size:10.5px;color:#666;margin-bottom:6px">วางแผนปรับปรุงระยะกลาง</div>
+      <div class="pm-item">7.3 Library (3.96)</div>
+    </div>
+    <div class="pm-card review">
+      <div class="pm-title">🔵 ทบทวน — มาตรฐานดี</div>
+      <div style="font-size:10.5px;color:#666;margin-bottom:6px">รักษาและพัฒนาอย่างต่อเนื่อง</div>
+      <div class="pm-item">7.1 Physical (4.05)</div>
+      <div class="pm-item">7.2 Labs (4.04)</div>
+    </div>
+  </div>
+  <div class="cc"><h3>สิ่งที่ผู้ตอบต้องการให้ปรับปรุงมากที่สุด (เลือกได้มากกว่า 1 ข้อ)</h3>
+    <div class="improve-bar"><div class="improve-label">ระบบอินเทอร์เน็ต</div><div class="improve-track"><div class="improve-fill" style="width:100%"></div></div><div class="improve-count">166</div></div>
+    <div class="improve-bar"><div class="improve-label">ความสะอาดและสิ่งแวดล้อม</div><div class="improve-track"><div class="improve-fill" style="width:45%"></div></div><div class="improve-count">74</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องเรียน</div><div class="improve-track"><div class="improve-fill" style="width:40%"></div></div><div class="improve-count">66</div></div>
+    <div class="improve-bar"><div class="improve-label">การบริการของเจ้าหน้าที่</div><div class="improve-track"><div class="improve-fill" style="width:33%"></div></div><div class="improve-count">54</div></div>
+    <div class="improve-bar"><div class="improve-label">ความปลอดภัยในอาคาร</div><div class="improve-track"><div class="improve-fill" style="width:32%"></div></div><div class="improve-count">53</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องปฏิบัติการ</div><div class="improve-track"><div class="improve-fill" style="width:28%"></div></div><div class="improve-count">47</div></div>
+    <div class="improve-bar"><div class="improve-label">ระบบแจ้งซ่อม</div><div class="improve-track"><div class="improve-fill" style="width:21%"></div></div><div class="improve-count">35</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องสมุด</div><div class="improve-track"><div class="improve-fill" style="width:16%"></div></div><div class="improve-count">27</div></div>
+  </div>
+  <div class="cc"><h3>ตารางลำดับความสำคัญ</h3>
+    <table class="tt"><thead><tr><th>ลำดับ</th><th>หมวด</th><th>คะแนน</th><th>ระดับเร่งด่วน</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>7.4 ระบบ IT/Wi-Fi</td><td><strong>3.89</strong></td><td><span class="bdg br">เร่งด่วน</span></td><td style="font-size:11px">แก้ไขจุดอับสัญญาณ อัปเกรดระบบเครือข่าย</td></tr>
+      <tr><td><strong>2</strong></td><td>7.3 ห้องสมุด</td><td><strong>3.96</strong></td><td><span class="bdg ba">ติดตาม</span></td><td style="font-size:11px">เพิ่มฐานข้อมูลออนไลน์ ขยายเวลาให้บริการ</td></tr>
+      <tr><td><strong>3</strong></td><td>7.2 ห้องปฏิบัติการ</td><td><strong>4.04</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">ตรวจสอบซ่อมบำรุงอุปกรณ์ประจำปี</td></tr>
+      <tr><td><strong>4</strong></td><td>7.1 อาคาร</td><td><strong>4.05</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">บำรุงรักษาความสะอาดและความสว่าง</td></tr>
+      <tr><td><strong>5</strong></td><td>7.7 ระบบแจ้งซ่อม</td><td><strong>4.09</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">กำหนด SLA การตอบสนอง 72 ชั่วโมง</td></tr>
+      <tr><td><strong>6</strong></td><td>7.6 คุณภาพบุคลากร</td><td><strong>4.14</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">จัดอบรมเพิ่มทักษะการบริการรายปี</td></tr>
+      <tr><td><strong>7</strong></td><td>7.5 ความปลอดภัย</td><td><strong>4.21</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">ทบทวนแผนฉุกเฉินประจำปีการศึกษา</td></tr>
+    </tbody></table>
   </div>
 </div>
 
 <!-- ACTION PLAN -->
 <div id="pane-action" class="pn">
-  <div class="rh"><h2>📌 แผนพัฒนาและปรับปรุง</h2><button class="btn bp" onclick="copySAR()">📋 Export แผน</button></div>
+  <div class="rh"><h2>📌 แผนพัฒนาและปรับปรุง</h2><button class="btn bp" onclick="copyAction()">📋 Export แผน</button></div>
   <div class="ai-box">
-    <h4>🤖 ข้อเสนอแนะเชิงนโยบายจากผลการประเมิน</h4>
-    <div class="ai-content" id="ai-action">กำลังวิเคราะห์...</div>
+    <h4>📊 ข้อเสนอแนะเชิงนโยบายจากผลการประเมิน</h4>
+    <div class="ai-content">จากผลการประเมิน 248 คน ควรให้ความสำคัญกับการพัฒนา <strong>ระบบ IT/Wi-Fi</strong> เป็นลำดับแรก เนื่องจากผู้ตอบ 67% เลือกให้ปรับปรุง ควรบรรจุในแผนปฏิบัติการประจำปีพร้อมงบประมาณและผู้รับผิดชอบที่ชัดเจน รายงานความคืบหน้าต่อคณะกรรมการ AUN-QA ในรอบถัดไป</div>
   </div>
-  <div id="action-list"></div>
+  <div id="action-content">
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</div><span class="bdg br">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> แก้ไขจุดอับสัญญาณ Wi-Fi ในพื้นที่เรียน ตรวจสอบ Access Point ทุกจุด<br><strong>แผนระยะกลาง:</strong> อัปเกรดระบบเครือข่ายให้รองรับการใช้งานพร้อมกันไม่น้อยกว่า 300 อุปกรณ์</div><div class="ap-meta"><span class="ap-tag">👤 ศูนย์คอมพิวเตอร์/IT</span><span class="ap-tag">📅 เร่งด่วน ภายใน 2 สัปดาห์</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.1 อาคารและสิ่งอำนวยความสะดวก (ความสะอาด)</div><span class="bdg ba">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำทุกชั้น กำหนดรอบทำความสะอาดชัดเจน แก้ไขปัญหากลิ่นและความสะอาดห้องน้ำชั้น 1 และ 3<br><strong>แผนระยะกลาง:</strong> ติดตั้งระบบลงทะเบียนทำความสะอาด จัดทำป้ายรายงานเวลาทำความสะอาดล่าสุด</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายอาคารสถานที่</span><span class="ap-tag">📅 ภายใน 1 สัปดาห์</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.3 ทรัพยากรห้องสมุด</div><span class="bdg bb">ติดตาม</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มการเข้าถึงฐานข้อมูลออนไลน์และ e-Book<br><strong>แผนระยะกลาง:</strong> ขยายชั่วโมงให้บริการห้องสมุดให้ครอบคลุมมากขึ้น</div><div class="ap-meta"><span class="ap-tag">👤 สำนักวิทยบริการ</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.2 ห้องปฏิบัติการและอุปกรณ์</div><span class="bdg bb">ทบทวน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> ตรวจสอบและซ่อมบำรุงอุปกรณ์ชำรุด เพิ่มจำนวนคอมพิวเตอร์ให้เพียงพอต่อนักศึกษา<br><strong>แผนระยะกลาง:</strong> จัดทำแผนจัดหาอุปกรณ์ทันสมัยทดแทนประจำปี</div><div class="ap-meta"><span class="ap-tag">👤 คณะ/ภาควิชา</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.7 ระบบรับข้อเสนอแนะและซ่อมบำรุง</div><span class="bdg bg">ต่อเนื่อง</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> กำหนด SLA การตอบสนองปัญหาภายใน 72 ชั่วโมง<br><strong>แผนระยะกลาง:</strong> สร้างช่องทางรับข้อเสนอแนะออนไลน์ที่ใช้งานง่าย</div><div class="ap-meta"><span class="ap-tag">👤 คณะกรรมการประกันคุณภาพ</span><span class="ap-tag">📅 ภายในเดือนนี้</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.6 คุณภาพการให้บริการ</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> จัดอบรมเพิ่มทักษะการบริการรายปี ประเมินความพึงพอใจบุคลากรรายไตรมาส</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายบุคลากร</span><span class="ap-tag">📅 ประจำปีการศึกษา</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.5 สุขภาพและความปลอดภัย</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> ทบทวนแผนฉุกเฉินและความปลอดภัย จัดอบรมนักศึกษาประจำปี</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายความปลอดภัย</span><span class="ap-tag">📅 ต้นปีการศึกษา</span></div></div>
+  </div>
+</div>
+
+<!-- SUGGESTIONS -->
+<div id="pane-suggest" class="pn">
+  <div class="rh"><h2>💬 ข้อเสนอแนะจากผู้ตอบแบบสอบถาม</h2></div>
+  <div class="ai-box">
+    <h4>📊 สรุปประเด็นหลักจากข้อเสนอแนะ (18 รายการ)</h4>
+    <div class="ai-content">
+      <strong>ประเด็นที่พบบ่อยที่สุด:</strong><br>
+      • <strong>ห้องน้ำ</strong> — กลิ่นไม่พึงประสงค์ ความสะอาด มีการสูบบุหรี่ในห้องน้ำ (พบใน 7 รายการ)<br>
+      • <strong>Wi-Fi/อินเทอร์เน็ต</strong> — สัญญาณล่มบ่อย ไม่เสถียร (พบใน 1 รายการ)<br>
+      • <strong>ปลั๊กไฟ/สิ่งอำนวยความสะดวก</strong> — ปลั๊กไฟไม่เพียงพอในพื้นที่ทำงานกลุ่ม (พบใน 2 รายการ)<br><br>
+      <strong>ข้อเสนอแนะเชิงบวก:</strong> มีผู้ตอบแสดงความพึงพอใจโดยรวม เช่น "ดีมาก" "ดีค่ะ" "เรียนดีและสนุก"
+    </div>
+  </div>
+  <div class="cc">
+    <h3>ข้อเสนอแนะทั้งหมด (18 รายการ)</h3>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="theme-chip active" style="background:#eff6ff;color:#1a4fa8" onclick="filterSuggest('all',this)">ทั้งหมด (18)</span>
+      <span class="theme-chip" style="background:#fee2e2;color:#dc2626" onclick="filterSuggest('toilet',this)">🚽 ห้องน้ำ (7)</span>
+      <span class="theme-chip" style="background:#fef3c7;color:#d97706" onclick="filterSuggest('wifi',this)">🌐 Wi-Fi (1)</span>
+      <span class="theme-chip" style="background:#dcfce7;color:#16a34a" onclick="filterSuggest('good',this)">👍 เชิงบวก (5)</span>
+    </div>
+    <div id="suggest-list"></div>
+  </div>
 </div>
 
 <!-- SAR -->
 <div id="pane-sar" class="pn">
   <div class="rh"><h2>📄 รายงานผล SAR</h2><button class="btn bp" onclick="copySAR()">📋 คัดลอก</button></div>
-  <div id="sarcont"></div>
-</div>
-
-<!-- IMPORT -->
-<div id="pane-imp" class="pn">
-  <div class="rh"><h2>⬆️ นำเข้าข้อมูล CSV</h2></div>
-  <div class="ic">
-    <h3>ขั้นตอนส่งออกจาก Google Sheets</h3>
-    <div class="step"><div class="sn">1</div><div class="sx">เปิด Google Sheets → ไฟล์ → ดาวน์โหลด → CSV</div></div>
-    <div class="step"><div class="sn">2</div><div class="sx">อัปโหลดไฟล์ด้านล่าง ระบบวิเคราะห์อัตโนมัติทันที</div></div>
-  </div>
-  <div class="uz" onclick="document.getElementById('csvi').click()">
-    <div class="uzicon">📂</div>
-    <h3>คลิกหรือลากไฟล์ CSV มาวางที่นี่</h3>
-    <p>รองรับ .csv จาก Google Sheets เท่านั้น</p>
-    <button class="btn bp" style="margin:0 auto">เลือกไฟล์ CSV</button>
-    <input type="file" id="csvi" accept=".csv" style="display:none" onchange="loadCSV(this)">
-  </div>
-  <div class="fh"><p><strong>รูปแบบที่รองรับ:</strong> คอลัมน์เริ่มด้วย 7.1–7.7, ค่า 1–5 (Likert)</p></div>
-</div>
-
-</div>
-<!-- SUGGESTIONS -->
-<div id="pane-suggest" class="pn">
-  <div class="rh">
-    <h2>💬 ข้อเสนอแนะจากผู้ตอบแบบสอบถาม</h2>
-  </div>
-
-  <!-- No data state -->
-  <div id="suggest-nodata" class="ai-box" style="background:#fffbeb;border-color:#fcd34d">
-    <h4 style="color:#d97706">⚠️ ยังไม่มีข้อมูลข้อเสนอแนะ</h4>
-    <div class="ai-content" style="color:#92400e">
-      กรุณานำเข้าไฟล์ CSV จาก Google Sheets ก่อน<br>
-      โดยไฟล์ต้องมีคอลัมน์ที่มีคำว่า <strong>"เสนอแนะ"</strong> หรือ <strong>"ข้อเสนอ"</strong> หรือ <strong>"suggestion"</strong> หรือ <strong>"comment"</strong>
+  <div class="sbox">
+    <div class="sband"><h2>รายงานผลการประเมินความพึงพอใจสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค</h2><p>AUN-QA Criterion 7 · คณะวิทยาการจัดการ มหาวิทยาลัยราชภัฏอุตรดิตถ์ · ปีการศึกษา 2568</p></div>
+    <div class="sb" id="sar-body">
+      <div class="st">1. บทนำ</div>
+      <p class="stx">คณะวิทยาการจัดการได้ดำเนินการสำรวจความพึงพอใจต่อสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค ตามเกณฑ์ AUN-QA Version 4.0 หมวดที่ 7: Learning Environment and Support Services มีผู้ตอบแบบสอบถามทั้งสิ้น 248 คน ประกอบด้วยนักศึกษา 231 คน (93.1%) อาจารย์ 11 คน (4.4%) และบุคลากรสายสนับสนุน 6 คน (2.4%) ในปีการศึกษา 2568</p>
+      <div class="st">2. ผลการประเมินรายหมวด</div>
+      <p class="stx" style="margin-bottom:8px">ค่าเฉลี่ยรวม AUN-QA หมวด 7 อยู่ที่ <strong>4.07</strong> จาก 5.00 คะแนน (ระดับ<strong>มาก</strong>) และค่าเฉลี่ยความพึงพอใจโดยรวม (ข้อ 18) อยู่ที่ <strong>4.18</strong> คะแนน</p>
+      <div class="sr best"><span>7.5 สุขภาพและความปลอดภัย</span><span><strong>4.21</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.6 คุณภาพการให้บริการ</span><span><strong>4.14</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.7 ระบบรับข้อเสนอแนะ</span><span><strong>4.09</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.1 อาคารและสิ่งอำนวยความสะดวก</span><span><strong>4.05</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.2 ห้องปฏิบัติการและอุปกรณ์</span><span><strong>4.04</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.3 ทรัพยากรห้องสมุด</span><span><strong>3.96</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr worst"><span>7.4 ระบบเทคโนโลยีสารสนเทศ</span><span><strong>3.89</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="st">3. ผลกระทบต่อผลลัพธ์การเรียนรู้ (Learning Outcomes)</div>
+      <p class="stx">ผู้ตอบแบบสอบถามประเมินว่าสิ่งสนับสนุนการเรียนรู้มีผลกระทบต่อประสิทธิภาพการเรียนรู้ในระดับมาก (ค่าเฉลี่ย 4.13/5.00) โดยทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน สะท้อนว่าสิ่งสนับสนุนการเรียนรู้โดยรวมเอื้อต่อการบรรลุผลลัพธ์การเรียนรู้ตามเป้าหมายหลักสูตร</p>
+      <div class="st">4. จุดแข็ง</div>
+      <ul class="sl">
+        <li>ด้านที่มีคะแนนสูงสุด: <strong>7.5 สุขภาพและความปลอดภัย</strong> (4.21) — สภาพแวดล้อมปลอดภัย เอื้อต่อการเรียนรู้</li>
+        <li><strong>7.6 คุณภาพการให้บริการของบุคลากร</strong> (4.14) — บุคลากรให้บริการด้วยความสุภาพและมีความรู้ความสามารถ</li>
+        <li>ทุก 7 หมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน</li>
+      </ul>
+      <div class="st">5. จุดที่ต้องพัฒนาและสิ่งสนับสนุนที่ต้องได้รับการแก้ไข</div>
+      <ul class="sl">
+        <li><strong>7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</strong> (3.89) — คะแนนต่ำสุด ผู้ตอบ 166 คน (67%) เลือกให้ปรับปรุงเป็นอันดับ 1</li>
+        <li><strong>ความสะอาดและสิ่งแวดล้อม</strong> — ผู้ตอบ 74 คน เสนอให้ปรับปรุง โดยเฉพาะห้องน้ำทุกชั้น</li>
+        <li><strong>7.3 ทรัพยากรห้องสมุด</strong> (3.96) — ควรเพิ่มการเข้าถึงฐานข้อมูลออนไลน์</li>
+      </ul>
+      <div class="st">6. สรุปข้อเสนอแนะจากผู้ตอบ</div>
+      <ul class="sl">
+        <li>ต้องการให้แก้ไขปัญหา Wi-Fi ล่มบ่อย — "ขอ Wi-Fi อย่าล่มบ่อย"</li>
+        <li>ต้องการให้เพิ่มปลั๊กไฟในพื้นที่ทำงานกลุ่มให้เพียงพอ</li>
+        <li>ห้องน้ำทุกชั้นมีปัญหาความสะอาดและกลิ่น ควรเร่งแก้ไข</li>
+        <li>ควรปรับปรุงเว็บไซต์ของคณะให้ทันสมัย</li>
+        <li>อยากให้มีพื้นที่ส่วนกลางสำหรับทำกิจกรรมเพิ่มขึ้น</li>
+      </ul>
+      <div class="st">7. แผนพัฒนา</div>
+      <ul class="sl">
+        <li><strong>เร่งด่วน (ภายใน 2 สัปดาห์):</strong> แก้ไขจุดอับสัญญาณ Wi-Fi และระบบเครือข่าย</li>
+        <li><strong>เร่งด่วน (ภายใน 1 สัปดาห์):</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำ แก้ไขปัญหาห้องน้ำ</li>
+        <li><strong>ระยะกลาง:</strong> จัดหาอุปกรณ์ห้องปฏิบัติการทดแทน เพิ่มฐานข้อมูลห้องสมุด</li>
+        <li><strong>ต่อเนื่อง:</strong> อบรมบุคลากร ทบทวนแผนความปลอดภัย ติดตามผลรายภาคการศึกษา</li>
+      </ul>
     </div>
-  </div>
-
-  <!-- Raw suggestions list -->
-  <div id="suggest-list-wrap" style="display:none">
-    <div class="cc">
-      <h3>ข้อเสนอแนะทั้งหมด (<span id="suggest-count">0</span> รายการ)</h3>
-      <div id="suggest-filter" style="margin-bottom:10px;display:flex;gap:6px;flex-wrap:wrap"></div>
-      <div id="suggest-list"></div>
-    </div>
+    <div class="sa"><button class="btn bp" onclick="copySAR()">📋 คัดลอกรายงาน</button></div>
   </div>
 </div>
 
+</div>
 <div class="toast" id="toast">✅ สำเร็จ!</div>
-
 <script>
 const cats=[
-  {id:'7.1',name:'Physical Facilities',th:'อาคารและสิ่งอำนวยความสะดวก',avg:3.82,n:127,impactWeight:0.85,impactDesc:'ห้องเรียน พื้นที่เรียนรู้ ส่งผลต่อสมาธิและประสิทธิภาพการเรียน'},
-  {id:'7.2',name:'Laboratories',th:'ห้องปฏิบัติการและอุปกรณ์',avg:3.44,n:127,impactWeight:0.95,impactDesc:'อุปกรณ์ปฏิบัติการส่งผลโดยตรงต่อทักษะวิชาชีพ (PLO)'},
-  {id:'7.3',name:'Library Resources',th:'ทรัพยากรห้องสมุด',avg:3.91,n:127,impactWeight:0.80,impactDesc:'แหล่งเรียนรู้สนับสนุนการค้นคว้าและการคิดวิเคราะห์'},
-  {id:'7.4',name:'IT Facilities',th:'ระบบเทคโนโลยีสารสนเทศ',avg:3.76,n:127,impactWeight:0.90,impactDesc:'Wi-Fi และระบบ IT ส่งผลต่อการเรียนออนไลน์และการเข้าถึงทรัพยากร'},
-  {id:'7.5',name:'Health & Safety',th:'สุขภาพและความปลอดภัย',avg:4.08,n:127,impactWeight:0.70,impactDesc:'สภาพแวดล้อมที่ปลอดภัยส่งผลต่อความพร้อมในการเรียนรู้'},
-  {id:'7.6',name:'Staff Competence',th:'คุณภาพการให้บริการ',avg:4.21,n:127,impactWeight:0.88,impactDesc:'เจ้าหน้าที่สนับสนุนการเข้าถึงทรัพยากรและบริการอย่างมีประสิทธิภาพ'},
-  {id:'7.7',name:'Feedback & Maintenance',th:'ระบบรับข้อเสนอแนะ',avg:3.68,n:127,impactWeight:0.75,impactDesc:'การตอบสนองต่อปัญหาส่งผลต่อความต่อเนื่องในการเรียนรู้'}
+  {id:'7.1',name:'Physical',th:'อาคารและสิ่งอำนวยความสะดวก',avg:4.05},
+  {id:'7.2',name:'Labs',th:'ห้องปฏิบัติการ',avg:4.04},
+  {id:'7.3',name:'Library',th:'ห้องสมุด',avg:3.96},
+  {id:'7.4',name:'IT/Wi-Fi',th:'ระบบ IT',avg:3.89},
+  {id:'7.5',name:'Safety',th:'ความปลอดภัย',avg:4.21},
+  {id:'7.6',name:'Staff',th:'คุณภาพบุคลากร',avg:4.14},
+  {id:'7.7',name:'Feedback',th:'ระบบแจ้งซ่อม',avg:4.09}
 ];
 
-// ACTIONS สำหรับแต่ละหมวด
-const actionPlans={
-  '7.1':{urgent:'ปรับปรุงสภาพห้องเรียน ระบบปรับอากาศ และแสงสว่าง',mid:'จัดพื้นที่การเรียนรู้เพิ่มเติมรองรับกิจกรรมกลุ่ม',owner:'ฝ่ายอาคารสถานที่',timeline:'ภาคการศึกษาถัดไป'},
-  '7.2':{urgent:'ตรวจสอบและซ่อมบำรุงอุปกรณ์ห้องปฏิบัติการที่ชำรุด',mid:'จัดหาอุปกรณ์ทันสมัยให้เพียงพอต่อจำนวนนักศึกษา',owner:'คณะ/ภาควิชา',timeline:'เร่งด่วน ภายใน 1 เดือน'},
-  '7.3':{urgent:'เพิ่มการเข้าถึงฐานข้อมูลออนไลน์',mid:'จัดชั่วโมงให้บริการห้องสมุดให้ครอบคลุมมากขึ้น',owner:'สำนักวิทยบริการ',timeline:'ภาคการศึกษาถัดไป'},
-  '7.4':{urgent:'แก้ไขจุดอับสัญญาณ Wi-Fi ในพื้นที่เรียน',mid:'อัปเกรดระบบเครือข่ายให้รองรับการใช้งานพร้อมกัน',owner:'ศูนย์คอมพิวเตอร์',timeline:'เร่งด่วน ภายใน 2 สัปดาห์'},
-  '7.5':{urgent:'ทบทวนแผนฉุกเฉินและความปลอดภัย',mid:'จัดอบรมด้านความปลอดภัยให้นักศึกษา',owner:'ฝ่ายความปลอดภัย',timeline:'ประจำปีการศึกษา'},
-  '7.6':{urgent:'จัดอบรมเพิ่มทักษะการบริการให้เจ้าหน้าที่',mid:'สร้างระบบประเมินความพึงพอใจเจ้าหน้าที่รายไตรมาส',owner:'ฝ่ายบุคลากร',timeline:'ภาคการศึกษาถัดไป'},
-  '7.7':{urgent:'สร้างช่องทางรับข้อเสนอแนะที่ชัดเจนและตอบสนองเร็ว',mid:'กำหนด SLA การแก้ไขปัญหาภายใน 72 ชั่วโมง',owner:'คณะกรรมการประกันคุณภาพ',timeline:'ภายในเดือนนี้'}
-};
+const suggestions=[
+  {text:'ควรปรับปรุงเว็บไซต์ของคณะให้มีความทันสมัย',type:'other'},
+  {text:'ดีมาก',type:'good'},
+  {text:'ช่วยทำความสะอาดห้องน้ำชั้น 1 ให้สะอาดด้วยค่ะ',type:'toilet'},
+  {text:'กลิ่นบุหรี่ในห้องน้ำ',type:'toilet'},
+  {text:'เรียนดีและสนุก',type:'good'},
+  {text:'ขอ Wi-Fi อย่าล่มบ่อย',type:'wifi'},
+  {text:'อยากให้ทำความสะอาดห้องน้ำชั้น 1 ให้สะอาดมากขึ้น เหม็นมาก',type:'toilet'},
+  {text:'อยากให้มีปลั๊กที่เสาเพิ่ม เนื่องจากบางครั้งไม่เพียงพอต่อนักศึกษาที่มาทำงานกลุ่มใต้ตึกคณะ อยากให้มีปลั๊กทั้งสองฝั่ง',type:'other'},
+  {text:'อยากให้มีปลั๊กที่เสาอีกฝั่งเพิ่ม ถ้าเป็นไปได้ จะได้ไม่แย่งกันใช้ เพราะบางทีมันไม่เพียงพอ',type:'other'},
+  {text:'ห้องน้ำชั้น 4 น้ำไหลเบามาก ส่วนห้องน้ำหลังเวทีสกปรก ส่งกลิ่นเหม็น ไม่ค่อยสะอาด บางห้องที่ฉีดก็ชำรุด',type:'toilet'},
+  {text:'อยากให้มีพื้นที่ส่วนกลางมากกว่านี้',type:'other'},
+  {text:'ดีมาก',type:'good'},
+  {text:'ห้องน้ำทั้งห้องน้ำชายและหญิง กลิ่นบุหรี่คือที่สุด เหม็นมาก ช่วยแก้ไขปัญหาเรื่องนี้หน่อยค่ะ เป็นภัยต่อทุกคนมาก',type:'toilet'},
+  {text:'ดีค่ะ ยกเว้นห้องคอมที่แม่บ้านไม่กวาด',type:'good'},
+  {text:'ดีครับ',type:'good'},
+  {text:'ห้องน้ำมีคนสูบบุหรี่ ควรปรับปรุงในด้านนี้',type:'toilet'},
+  {text:'ทำความสะอาดห้องเรียนด้วยค่ะ เรียนทีไรเส้นผมมุมเดิมยังมีอยู่เลยค่ะ พวกห้องคอมควรกวาดให้สะอาด',type:'toilet'}
+];
 
-function lvl(v){
-  if(v>=4.5)return['bg','มากที่สุด'];
-  if(v>=3.5)return['bg','มาก'];
-  if(v>=2.5)return['ba','ปานกลาง'];
-  if(v>=1.5)return['br','น้อย'];
-  return['br','น้อยที่สุด'];
-}
-function clr(v){return v>=4.0?'#16a34a':v>=3.5?'#d97706':'#dc2626'}
-function pct(v){return Math.round((v/5)*100)}
-function stars(v){return Array.from({length:5},(_,i)=>i<Math.round(v)?'⭐':'☆').join('')}
-
-function renderSummary(){
-  document.getElementById('stbody').innerHTML=cats.map(c=>{
-    const[cls,lbl]=lvl(c.avg);
-    return'<tr><td><strong>'+c.id+'</strong></td><td>'+c.th+'</td><td><strong>'+c.avg.toFixed(2)+'</strong></td><td><span class="bdg '+cls+'">'+lbl+'</span></td><td style="min-width:65px"><div class="bar"><div class="bf" style="width:'+pct(c.avg)+'%;background:'+clr(c.avg)+'"></div></div></td></tr>';
-  }).join('');
-}
-
-function renderImpact(){
-  const sorted=[...cats].sort((a,b)=>(b.impactWeight*b.avg)-(a.impactWeight*a.avg));
-  document.getElementById('impact-list').innerHTML=sorted.map(c=>{
-    const score=(c.impactWeight*c.avg).toFixed(2);
-    const icon=c.avg>=4?'🟢':c.avg>=3.5?'🟡':'🔴';
-    return'<div class="impact-row"><div class="impact-icon" style="background:'+(c.avg>=4?'#dcfce7':c.avg>=3.5?'#fef3c7':'#fee2e2')+'">'+icon+'</div><div style="flex:1"><div class="impact-label">'+c.id+' '+c.th+'</div><div class="impact-desc">'+c.impactDesc+'</div></div><div class="impact-score" style="color:'+clr(c.avg)+'">'+score+'</div></div>';
-  }).join('');
-
-  // AI insight
-  const low=cats.filter(c=>c.avg<3.5);
-  const high=cats.filter(c=>c.avg>=4.0);
-  document.getElementById('ai-impact').innerHTML=
-    (high.length>0?'<strong>จุดแข็ง:</strong> '+high.map(c=>c.th).join(', ')+' มีคะแนนสูงและส่งผลบวกต่อการเรียนรู้อย่างมีนัยสำคัญ<br>':'') +
-    (low.length>0?'<strong>⚠️ ความเสี่ยง:</strong> '+low.map(c=>c.th).join(', ')+' มีคะแนนต่ำกว่า 3.50 ซึ่งอาจส่งผลกระทบต่อ PLO ของหลักสูตร ควรได้รับการแก้ไขเร่งด่วน':'<strong>✅ ภาพรวมดี:</strong> ทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50');
-}
-
-function renderPriority(){
-  const groups={critical:[],maintain:[],monitor:[],review:[]};
-  cats.forEach(c=>{
-    const impact=c.impactWeight;
-    if(c.avg<3.5&&impact>=0.85)groups.critical.push(c);
-    else if(c.avg>=4.0&&impact>=0.75)groups.maintain.push(c);
-    else if(c.avg<3.5&&impact<0.85)groups.monitor.push(c);
-    else groups.review.push(c);
-  });
-
-  const pmDef={
-    critical:{title:'🔴 เร่งด่วน — แก้ไขทันที',sub:'ผลกระทบสูง + คะแนนต่ำ'},
-    maintain:{title:'🟢 รักษาระดับ — จุดแข็ง',sub:'ผลกระทบสูง + คะแนนดี'},
-    monitor:{title:'🟡 ติดตาม — ระวัง',sub:'ผลกระทบปานกลาง + คะแนนต่ำ'},
-    review:{title:'🔵 ทบทวน — พัฒนาต่อ',sub:'ผลกระทบปานกลาง + คะแนนพอใช้'}
-  };
-
-  document.getElementById('pm-grid').innerHTML=Object.entries(groups).map(([key,items])=>
-    '<div class="pm-card '+key+'"><div class="pm-title">'+pmDef[key].title+'</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">'+pmDef[key].sub+'</div>'+
-    (items.length?items.map(c=>'<div class="pm-item">'+c.id+' '+c.th+' ('+c.avg.toFixed(2)+')</div>').join(''):'<div class="pm-item" style="color:#999">ไม่มีรายการ</div>')+'</div>'
+function filterSuggest(type,el){
+  document.querySelectorAll('.theme-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const items=type==='all'?suggestions:suggestions.filter(s=>s.type===type);
+  document.getElementById('suggest-list').innerHTML=items.map((s,i)=>
+    '<div class="suggest-item"><span class="snum">'+(i+1)+'</span>'+s.text+'</div>'
   ).join('');
-
-  // Priority table - sorted by urgency
-  const allSorted=[...cats].sort((a,b)=>{
-    const urgA=(5-a.avg)*a.impactWeight;
-    const urgB=(5-b.avg)*b.impactWeight;
-    return urgB-urgA;
-  });
-  document.getElementById('priority-tbody').innerHTML=allSorted.map((c,i)=>{
-    const urgScore=((5-c.avg)*c.impactWeight).toFixed(2);
-    const urg=c.avg<3.5&&c.impactWeight>=0.85?'<span class="bdg br">เร่งด่วนมาก</span>':
-               c.avg<3.5?'<span class="bdg ba">เร่งด่วน</span>':
-               c.avg>=4.0?'<span class="bdg bg">รักษาระดับ</span>':'<span class="bdg bb">ติดตาม</span>';
-    const action=actionPlans[c.id];
-    return'<tr><td><strong>'+(i+1)+'</strong></td><td>'+c.id+' '+c.th+'</td><td><strong>'+c.avg.toFixed(2)+'</strong></td><td>'+urg+'</td><td style="font-size:11px">'+action.urgent+'</td></tr>';
-  }).join('');
-
-  // AI priority insight
-  const crit=groups.critical;
-  document.getElementById('ai-priority').innerHTML=
-    crit.length>0?'<strong>🔴 ต้องดำเนินการทันที:</strong> '+crit.map(c=>c.th).join(', ')+' มีทั้งผลกระทบสูงและคะแนนต่ำ ควรบรรจุในแผนปฏิบัติการภาคการศึกษาถัดไปโดยเร่งด่วน':
-    '<strong>✅ ไม่มีรายการวิกฤต</strong> — ทุกหมวดที่มีผลกระทบสูงได้รับคะแนนในระดับที่ยอมรับได้';
-}
-
-function renderAction(){
-  const sorted=[...cats].sort((a,b)=>(5-a.avg)*a.impactWeight-(5-b.avg)*b.impactWeight).reverse();
-  document.getElementById('action-list').innerHTML=sorted.map(c=>{
-    const[cls,lbl]=lvl(c.avg);
-    const a=actionPlans[c.id];
-    const urg=c.avg<3.5&&c.impactWeight>=0.85?'br':c.avg<3.5?'ba':'bg';
-    const urgTxt=c.avg<3.5&&c.impactWeight>=0.85?'เร่งด่วนมาก':c.avg<3.5?'เร่งด่วน':'ต่อเนื่อง';
-    return'<div class="ap-row"><div class="ap-head"><div class="ap-cat">'+c.id+' '+c.th+' <span style="font-weight:400;color:#5a7aaa">('+c.avg.toFixed(2)+')</span></div><span class="bdg '+urg+'">'+urgTxt+'</span></div><div class="ap-body"><strong>การดำเนินการทันที:</strong> '+a.urgent+'<br><strong>แผนระยะกลาง:</strong> '+a.mid+'</div><div class="ap-meta"><span class="ap-tag">👤 '+a.owner+'</span><span class="ap-tag">📅 '+a.timeline+'</span></div></div>';
-  }).join('');
-
-  document.getElementById('ai-action').innerHTML='จากผลการประเมิน ควรให้ความสำคัญกับการพัฒนา <strong>'+sorted.filter(c=>c.avg<3.5).map(c=>c.th).join(', ')+'</strong> เป็นลำดับแรก โดยบรรจุในแผนปฏิบัติการประจำปี พร้อมกำหนดผู้รับผิดชอบและตัวชี้วัดที่ชัดเจน เพื่อรายงานความคืบหน้าต่อคณะกรรมการ AUN-QA ในรอบถัดไป';
-}
-
-function renderSAR(totalN){
-  const n=totalN||cats[0].n||127;
-  const avg=(cats.reduce((s,c)=>s+c.avg,0)/cats.length).toFixed(2);
-  const best=cats.reduce((a,b)=>a.avg>b.avg?a:b);
-  const worst=cats.reduce((a,b)=>a.avg<b.avg?a:b);
-  const critical=cats.filter(c=>c.avg<3.5&&c.impactWeight>=0.85);
-  document.getElementById('sarcont').innerHTML='<div class="sbox"><div class="sband"><h2>รายงานผลการประเมินความพึงพอใจ — AUN-QA Criterion 7</h2><p>คณะวิทยาการจัดการ · มหาวิทยาลัยราชภัฏอุตรดิตถ์ · ปีการศึกษา 2568</p></div><div class="sb"><div class="st">1. บทนำ</div><p class="stx">คณะวิทยาการจัดการดำเนินการสำรวจความพึงพอใจต่อสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค ตามเกณฑ์ AUN-QA Version 4.0 หมวด 7 มีผู้ตอบ '+n+' คน ปีการศึกษา 2568</p><div class="st">2. ผลการประเมิน</div><p class="stx" style="margin-bottom:8px">ค่าเฉลี่ยรวม <strong>'+avg+'</strong> จาก 5.00 (ระดับ<strong>'+lvl(parseFloat(avg))[1]+'</strong>)</p>'+cats.map(c=>{const[cls,lbl]=lvl(c.avg);return'<div class="sr'+(c.id===best.id?' best':c.id===worst.id?' worst':'')+'"><span>'+c.id+' '+c.th+'</span><span><strong>'+c.avg.toFixed(2)+'</strong> <span class="bdg '+cls+'">'+lbl+'</span></span></div>';}).join('')+'<div class="st">3. ผลกระทบต่อผลลัพธ์การเรียนรู้</div><ul class="sl">'+cats.map(c=>'<li><strong>'+c.id+'</strong> '+c.impactDesc+'</li>').join('')+'</ul><div class="st">4. จุดแข็งและจุดที่ต้องพัฒนา</div><ul class="sl"><li>จุดแข็ง: <strong>'+best.id+' '+best.th+'</strong> ('+best.avg.toFixed(2)+' คะแนน)</li><li>ต้องเร่งพัฒนา: <strong>'+worst.id+' '+worst.th+'</strong> ('+worst.avg.toFixed(2)+' คะแนน)</li>'+(critical.length?'<li>รายการวิกฤต: '+critical.map(c=>c.th).join(', ')+'</li>':'')+'</ul><div class="st">5. แผนพัฒนา</div><ul class="sl">'+cats.filter(c=>c.avg<3.5).map(c=>'<li><strong>'+c.id+' '+c.th+':</strong> '+actionPlans[c.id].urgent+' ('+actionPlans[c.id].timeline+')</li>').join('')+'<li>ติดตามผลการพัฒนาทุกภาคการศึกษา</li></ul></div><div class="sa"><button class="btn bp" onclick="copySAR()">📋 คัดลอก</button></div></div>';
-}
-
-function updateMetrics(totalN){
-  const avg=cats.reduce((s,c)=>s+c.avg,0)/cats.length;
-  const best=cats.reduce((a,b)=>a.avg>b.avg?a:b);
-  const worst=cats.reduce((a,b)=>a.avg<b.avg?a:b);
-  document.getElementById('m1').textContent=avg.toFixed(2);
-  if(totalN!==undefined)document.getElementById('m2').textContent=totalN;
-  document.getElementById('m3').textContent=best.id+' '+best.name.split(' ')[0];
-  document.getElementById('m3s').textContent=best.avg.toFixed(2)+' คะแนน';
-  document.getElementById('m4').textContent=worst.id+' '+worst.name.split(' ')[0];
-  document.getElementById('m4s').textContent=worst.avg.toFixed(2)+' คะแนน';
-  document.getElementById('bsc').textContent=avg.toFixed(2);
-  document.getElementById('blvl').textContent=lvl(avg)[1];
-  document.getElementById('stars').textContent=stars(avg);
-}
-
-let BC,RC,IC;
-function initCharts(){
-  const lbls=cats.map(c=>c.id);
-  const avgs=cats.map(c=>c.avg);
-  const cols=avgs.map(v=>v>=4?'#16a34a':v>=3.5?'#d97706':'#dc2626');
-  if(BC)BC.destroy();
-  BC=new Chart(document.getElementById('bc'),{type:'bar',data:{labels:lbls,datasets:[{label:'ค่าเฉลี่ย',data:avgs,backgroundColor:cols,borderRadius:5,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{min:0,max:5,ticks:{stepSize:1,font:{size:11},color:'#5a7aaa'},grid:{color:'rgba(0,0,0,0.04)'}},x:{ticks:{font:{size:11},color:'#5a7aaa'},grid:{display:false}}}}});
-  if(RC)RC.destroy();
-  RC=new Chart(document.getElementById('rc'),{type:'radar',data:{labels:cats.map(c=>c.id+' '+c.name.split(' ')[0]),datasets:[{data:avgs,backgroundColor:'rgba(37,99,235,0.12)',borderColor:'#2563eb',borderWidth:2,pointBackgroundColor:cols,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9},color:'#5a7aaa',backdropColor:'transparent'},grid:{color:'rgba(0,0,0,0.07)'},pointLabels:{font:{size:9.5},color:'#2d4a72'}}}}});
-}
-
-function initImpactChart(){
-  if(IC)IC.destroy();
-  IC=new Chart(document.getElementById('impactChart'),{
-    type:'bar',
-    data:{labels:cats.map(c=>c.id),datasets:[
-      {label:'ค่าเฉลี่ยความพึงพอใจ',data:cats.map(c=>c.avg),backgroundColor:'rgba(37,99,235,0.7)',borderRadius:4},
-      {label:'น้ำหนักผลกระทบ×5',data:cats.map(c=>parseFloat((c.impactWeight*5).toFixed(2))),backgroundColor:'rgba(220,38,38,0.5)',borderRadius:4}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12}}},scales:{y:{min:0,max:5,ticks:{font:{size:10},color:'#5a7aaa'}},x:{ticks:{font:{size:10},color:'#5a7aaa'}}}}
-  });
 }
 
 function go(id,el){
@@ -455,100 +390,41 @@ function go(id,el){
   document.querySelectorAll('.pn').forEach(p=>p.classList.remove('on'));
   document.getElementById('pane-'+id).classList.add('on');
   if(id==='dash')setTimeout(initCharts,60);
-  if(id==='impact'){renderImpact();setTimeout(initImpactChart,60);}
-  if(id==='priority')renderPriority();
-  if(id==='action')renderAction();
-  if(id==='sar')renderSAR();
-  if(id==='suggest')showSuggestData();
+  if(id==='impact')setTimeout(initImpactChart,60);
+  if(id==='suggest')filterSuggest('all',document.querySelector('.theme-chip'));
 }
 
 function copySAR(){
-  navigator.clipboard.writeText(document.getElementById('sarcont')?.innerText||document.getElementById('action-list')?.innerText||'').then(()=>{
-    const t=document.getElementById('toast');
-    t.textContent='✅ คัดลอกแล้ว!';t.classList.add('show');
-    setTimeout(()=>t.classList.remove('show'),2200);
-  });
+  navigator.clipboard.writeText(document.getElementById('sar-body').innerText).then(()=>showToast('📋 คัดลอกรายงานแล้ว!'));
+}
+function copyAction(){
+  navigator.clipboard.writeText(document.getElementById('action-content').innerText).then(()=>showToast('📋 คัดลอกแผนพัฒนาแล้ว!'));
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
 }
 
-function loadCSV(input){
-  const file=input.files[0];if(!file)return;
-  const r=new FileReader();
-  r.onload=e=>{
-    const rows=e.target.result.split('\n').filter(x=>x.trim());
-    const hdrs=rows[0].split(',');
-    const data=rows.slice(1).filter(x=>x.trim());
-    const totalN=data.length;
-    // Detect suggestion column
-    const sugCol = detectSuggestCol(hdrs);
-    if (sugCol >= 0) {
-      allSuggestions = data.map(row => row.split(',')[sugCol] || '').map(s=>s.replace(/^"|"$/g,'').trim()).filter(s=>s.length>2);
-    }
-    showSuggestData();
-    cats.forEach(cat=>{
-      const cols=hdrs.map((h,i)=>h.includes(cat.id)?i:-1).filter(i=>i>=0);
-      if(!cols.length)return;
-      let s=0,n=0;
-      data.forEach(row=>{const vs=row.split(',');cols.forEach(ci=>{const v=parseFloat(vs[ci]);if(!isNaN(v)&&v>=1&&v<=5){s+=v;n++;}});});
-      if(n>0){cat.avg=Math.round((s/n)*100)/100;cat.n=totalN;}
-    });
-    updateMetrics(totalN);renderSummary();renderSAR(totalN);
-    go('dash',document.querySelectorAll('.nb')[0]);
-    const t=document.getElementById('toast');
-    t.textContent='✅ นำเข้าสำเร็จ! พบ '+totalN+' คน';
-    t.classList.add('show');setTimeout(()=>{t.classList.remove('show');},2800);
-  };
-  r.readAsText(file,'UTF-8');
+let BC,RC,IC;
+function initCharts(){
+  const lbls=cats.map(c=>c.id);
+  const avgs=cats.map(c=>c.avg);
+  const cols=avgs.map(v=>v>=4?'#16a34a':'#d97706');
+  if(BC)BC.destroy();
+  BC=new Chart(document.getElementById('bc'),{type:'bar',data:{labels:lbls,datasets:[{label:'ค่าเฉลี่ย',data:avgs,backgroundColor:cols,borderRadius:5,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{min:3.5,max:5,ticks:{stepSize:.2,font:{size:10},color:'#5a7aaa'},grid:{color:'rgba(0,0,0,0.04)'}},x:{ticks:{font:{size:10},color:'#5a7aaa'},grid:{display:false}}}}});
+  if(RC)RC.destroy();
+  RC=new Chart(document.getElementById('rc'),{type:'radar',data:{labels:cats.map(c=>c.id+' '+c.name),datasets:[{data:avgs,backgroundColor:'rgba(37,99,235,0.12)',borderColor:'#2563eb',borderWidth:2,pointBackgroundColor:cols,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:3,max:5,ticks:{stepSize:.5,font:{size:9},color:'#5a7aaa',backdropColor:'transparent'},grid:{color:'rgba(0,0,0,0.07)'},pointLabels:{font:{size:9.5},color:'#2d4a72'}}}}});
 }
-
-// ===== SUGGESTIONS =====
-let allSuggestions = [];
-let activeTheme = 'all';
-
-function detectSuggestCol(headers) {
-  const keywords = ['เสนอแนะ','ข้อเสนอ','ความคิดเห็น','suggestion','comment','opinion','other','อื่นๆ','เพิ่มเติม'];
-  return headers.findIndex(h => keywords.some(k => h.toLowerCase().includes(k)));
+function initImpactChart(){
+  if(IC)IC.destroy();
+  IC=new Chart(document.getElementById('impactChart'),{type:'bar',data:{labels:cats.map(c=>c.id),datasets:[{label:'ค่าเฉลี่ยความพึงพอใจ',data:cats.map(c=>c.avg),backgroundColor:'rgba(37,99,235,0.7)',borderRadius:4},{label:'เกณฑ์ขั้นต่ำ AUN-QA (3.50)',data:cats.map(()=>3.5),type:'line',borderColor:'#dc2626',borderDash:[5,5],pointRadius:0,borderWidth:1.5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12}}},scales:{y:{min:3,max:5,ticks:{font:{size:10},color:'#5a7aaa'}},x:{ticks:{font:{size:10},color:'#5a7aaa'}}}}});
 }
-
-function renderSuggestions(filter) {
-  activeTheme = filter || 'all';
-  const items = filter === 'all' ? allSuggestions : allSuggestions.filter(s => s.toLowerCase().includes(filter));
-  const list = document.getElementById('suggest-list');
-  if (!items.length) { list.innerHTML = '<div style="color:#5a7aaa;font-size:12px;padding:8px 0">ไม่พบข้อเสนอแนะในหมวดนี้</div>'; return; }
-  list.innerHTML = items.map((s,i) =>
-    '<div class="suggest-item"><span class="suggest-num">'+(i+1)+'</span>'+escHtml(s)+'</div>'
-  ).join('');
-  document.querySelectorAll('.theme-chip').forEach(c => {
-    c.classList.toggle('active', c.dataset.filter === activeTheme);
-  });
-}
-
-function escHtml(t){ return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-function showSuggestData() {
-  const nodata = document.getElementById('suggest-nodata');
-  const listWrap = document.getElementById('suggest-list-wrap');
-  if (allSuggestions.length === 0) {
-    nodata.style.display = 'block'; listWrap.style.display = 'none';
-  } else {
-    nodata.style.display = 'none'; listWrap.style.display = 'block';
-    document.getElementById('suggest-count').textContent = allSuggestions.length;
-    const filter = document.getElementById('suggest-filter');
-    filter.innerHTML = [
-      {label:'ทั้งหมด ('+allSuggestions.length+')',f:'all',bg:'#eff6ff',col:'#1a4fa8'},
-      {label:'🔴 อุปกรณ์/ห้อง',f:'ห้อง',bg:'#fee2e2',col:'#dc2626'},
-      {label:'🌐 อินเทอร์เน็ต',f:'wifi',bg:'#fef3c7',col:'#d97706'},
-      {label:'📚 ห้องสมุด',f:'ห้องสมุด',bg:'#dcfce7',col:'#16a34a'},
-      {label:'👤 เจ้าหน้าที่',f:'เจ้าหน้าที่',bg:'#dbeafe',col:'#1a4fa8'}
-    ].map(t=>'<span class="theme-chip'+(t.f==='all'?' active':'')+'" data-filter="'+t.f+'" style="background:'+t.bg+';color:'+t.col+'" onclick="renderSuggestions(\''+t.f+'\')">'+t.label+'</span>').join('');
-    renderSuggestions('all');
-  }
-}
-
-// ===== END SUGGESTIONS =====
 
 // Init
-renderSummary();renderSAR();updateMetrics();showSuggestData();
+filterSuggest('all',document.querySelector('.theme-chip'));
 setTimeout(initCharts,150);
 </script>
 </body>
 </html>
+
