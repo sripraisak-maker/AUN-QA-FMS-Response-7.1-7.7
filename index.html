@@ -10,8 +10,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .hdr{background:linear-gradient(135deg,#062050,#1a4fa8 55%,#2563eb);position:relative;overflow:hidden}
-.hdr::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.07);pointer-events:none}
-.hdr::after{content:'';position:absolute;bottom:-40px;left:22%;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none}
+.hdr::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none}
+.hdr::after{content:'';position:absolute;bottom:-40px;left:22%;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
 .htop{display:flex;align-items:center;gap:14px;padding:16px 18px 10px;position:relative;z-index:2}
 .lring{width:68px;height:68px;border-radius:50%;background:#fff;padding:3px;box-shadow:0 3px 18px rgba(0,0,0,.35);flex-shrink:0}
 .lring img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
@@ -42,8 +42,7 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .cc{background:#fff;border-radius:13px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(26,79,168,.08)}
 .cc h3{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:500;color:#0a2d5e;margin-bottom:11px;display:flex;align-items:center;gap:7px}
 .cc h3::before{content:'';width:6px;height:6px;border-radius:50%;background:#2563eb;flex-shrink:0}
-.cw{position:relative;height:195px}
-.rw{position:relative;height:225px}
+.cw{position:relative;height:200px}.rw{position:relative;height:230px}
 .tt{width:100%;border-collapse:collapse;font-size:12px}
 .tt th{background:#eff6ff;color:#1a4fa8;font-weight:600;padding:7px 9px;text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.3px}
 .tt th:first-child{border-radius:7px 0 0 7px}.tt th:last-child{border-radius:0 7px 7px 0}
@@ -64,9 +63,6 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .pm-card.monitor .pm-title{color:#d97706}.pm-card.review .pm-title{color:#2563eb}
 .pm-item{font-size:11.5px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,.06);color:#0a2d5e}
 .pm-item:last-child{border-bottom:none}
-.impact-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8}
-.impact-row:last-child{border-bottom:none}
-.impact-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .ap-row{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:8px;border:1.5px solid #e8eef8;box-shadow:0 1px 4px rgba(26,79,168,.07)}
 .ap-row:hover{border-color:#bfdbfe}
 .ap-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
@@ -86,19 +82,8 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .sr{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:6px;margin-bottom:4px;background:#f0f5ff;font-size:12px}
 .sr.best{background:#dcfce7}.sr.worst{background:#fef3c7}
 .sa{display:flex;gap:8px;padding:13px 18px;border-top:1px solid #e8eef8;flex-wrap:wrap}
-.ic{background:#fff;border-radius:13px;padding:16px;box-shadow:0 2px 8px rgba(26,79,168,.08);margin-bottom:11px}
-.ic h3{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e;margin-bottom:9px}
-.step{display:flex;align-items:flex-start;gap:11px;padding:7px 0;border-bottom:1px solid #e8eef8}
-.step:last-child{border-bottom:none}
-.sn{width:22px;height:22px;border-radius:50%;background:#1a4fa8;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sx{font-size:12.5px;color:#0a2d5e;line-height:1.6;padding-top:1px}
-.rh{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;flex-wrap:wrap;gap:6px}
-.rh h2{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e}
-.btn{padding:8px 16px;border-radius:8px;font-family:'Sarabun',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;border:none;transition:all .18s;display:inline-flex;align-items:center;gap:5px}
-.bp{background:linear-gradient(135deg,#1a4fa8,#2563eb);color:#fff;box-shadow:0 2px 8px rgba(26,79,168,.25)}
-.bp:hover{opacity:.9}.bo{background:#fff;color:#1a4fa8;border:1.5px solid #3b82f6}.bo:hover{background:#eff6ff}
 .ai-box{background:linear-gradient(135deg,#f0f5ff,#e8f0fe);border:1.5px solid #93c5fd;border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.ai-box h4{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ai-box h4{font-family:'Kanit',sans-serif;font-size:12.5px;font-weight:600;color:#1a4fa8;margin-bottom:8px}
 .ai-content{font-size:12px;color:#1e3a5f;line-height:1.75}
 .suggest-item{background:#fff;border-radius:9px;padding:11px 13px;margin-bottom:7px;border:1px solid #e8eef8;font-size:12.5px;color:#0a2d5e;line-height:1.65}
 .suggest-item:hover{border-color:#bfdbfe}
@@ -107,10 +92,15 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 .theme-chip.active{border-color:#1a4fa8}
 .improve-bar{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #e8eef8}
 .improve-bar:last-child{border-bottom:none}
-.improve-label{font-size:12px;color:#0a2d5e;min-width:150px}
+.improve-label{font-size:12px;color:#0a2d5e;min-width:160px}
 .improve-track{flex:1;height:8px;background:#e8eef8;border-radius:4px}
 .improve-fill{height:8px;border-radius:4px;background:linear-gradient(90deg,#1a4fa8,#3b82f6)}
-.improve-count{font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;color:#1a4fa8;min-width:35px;text-align:right}
+.improve-count{font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;color:#1a4fa8;min-width:38px;text-align:right}
+.rh{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;flex-wrap:wrap;gap:6px}
+.rh h2{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:500;color:#0a2d5e}
+.btn{padding:8px 16px;border-radius:8px;font-family:'Sarabun',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;border:none;transition:all .18s;display:inline-flex;align-items:center;gap:5px}
+.bp{background:linear-gradient(135deg,#1a4fa8,#2563eb);color:#fff;box-shadow:0 2px 8px rgba(26,79,168,.25)}
+.bp:hover{opacity:.9}
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0a2d5e;color:#fff;padding:9px 20px;border-radius:20px;font-size:12.5px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999}
 .toast.show{opacity:1}
 </style>
@@ -138,16 +128,16 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 <!-- DASHBOARD -->
 <div id="pane-dash" class="pn on">
   <div class="mg">
-    <div class="mc"><div class="ml">ค่าเฉลี่ยรวม (AUN-QA 7)</div><div class="mv">4.07</div><div class="ms">จาก 5.00 คะแนน</div></div>
-    <div class="mc"><div class="ml">ผู้ตอบแบบสอบถาม</div><div class="mv">248</div><div class="ms">นักศึกษา 231 · อาจารย์ 11 · บุคลากร 6</div></div>
+    <div class="mc"><div class="ml">ค่าเฉลี่ยรวม AUN-QA 7</div><div class="mv">4.03</div><div class="ms">จาก 5.00 คะแนน</div></div>
+    <div class="mc"><div class="ml">ผู้ตอบแบบสอบถาม</div><div class="mv">439</div><div class="ms">นักศึกษา 389 · อาจารย์ 41 · บุคลากร 9</div></div>
     <div class="mc"><div class="ml">หมวดดีที่สุด</div><div class="mv" style="font-size:14px">7.5 Safety</div><div class="ms">4.21 คะแนน</div></div>
-    <div class="mc"><div class="ml">ต้องพัฒนา</div><div class="mv" style="font-size:14px">7.4 IT/Wi-Fi</div><div class="ms">3.89 คะแนน</div></div>
+    <div class="mc"><div class="ml">ต้องพัฒนา</div><div class="mv" style="font-size:14px">7.4 IT/Wi-Fi</div><div class="ms">3.87 คะแนน</div></div>
   </div>
   <div class="banner">
     <div class="bnl">
       <div class="bll">ผลการประเมินโดยรวม · ความพึงพอใจโดยรวม (ข้อ 18)</div>
-      <div class="bsc">4.18</div>
-      <div class="bsb">ระดับ: <strong>มาก</strong> · ปีการศึกษา 2568 · ผลกระทบต่อการเรียนรู้: 4.13/5.00</div>
+      <div class="bsc">4.15</div>
+      <div class="bsb">ระดับ: <strong>มาก</strong> · ปีการศึกษา 2568 · ผลกระทบต่อการเรียนรู้: 4.12/5.00</div>
     </div>
     <div class="stars">⭐⭐⭐⭐☆</div>
   </div>
@@ -158,11 +148,11 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
     <tbody>
       <tr><td><strong>7.1</strong></td><td>อาคารและสิ่งอำนวยความสะดวก</td><td><strong>4.05</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:81%;background:#16a34a"></div></div></td></tr>
       <tr><td><strong>7.2</strong></td><td>ห้องปฏิบัติการและอุปกรณ์</td><td><strong>4.04</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:81%;background:#16a34a"></div></div></td></tr>
-      <tr><td><strong>7.3</strong></td><td>ทรัพยากรห้องสมุด</td><td><strong>3.96</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:79%;background:#16a34a"></div></div></td></tr>
-      <tr><td><strong>7.4</strong></td><td>ระบบเทคโนโลยีสารสนเทศ</td><td><strong>3.89</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:78%;background:#d97706"></div></div></td></tr>
+      <tr><td><strong>7.3</strong></td><td>ทรัพยากรห้องสมุด</td><td><strong>3.88</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:78%;background:#d97706"></div></div></td></tr>
+      <tr><td><strong>7.4</strong></td><td>ระบบเทคโนโลยีสารสนเทศ</td><td><strong>3.87</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:77%;background:#d97706"></div></div></td></tr>
       <tr><td><strong>7.5</strong></td><td>สุขภาพและความปลอดภัย</td><td><strong>4.21</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:84%;background:#16a34a"></div></div></td></tr>
-      <tr><td><strong>7.6</strong></td><td>คุณภาพการให้บริการ</td><td><strong>4.14</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:83%;background:#16a34a"></div></div></td></tr>
-      <tr><td><strong>7.7</strong></td><td>ระบบรับข้อเสนอแนะและซ่อมบำรุง</td><td><strong>4.09</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:82%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.6</strong></td><td>คุณภาพการให้บริการ</td><td><strong>4.12</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:82%;background:#16a34a"></div></div></td></tr>
+      <tr><td><strong>7.7</strong></td><td>ระบบรับข้อเสนอแนะและซ่อมบำรุง</td><td><strong>4.05</strong></td><td><span class="bdg bg">มาก</span></td><td><div class="bar"><div class="bf" style="width:81%;background:#16a34a"></div></div></td></tr>
     </tbody></table>
   </div>
 </div>
@@ -173,23 +163,23 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
   <div class="ai-box">
     <h4>📊 การวิเคราะห์ตามเกณฑ์ AUN-QA Criterion 7</h4>
     <div class="ai-content">
-      <strong>ภาพรวม:</strong> ทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน สะท้อนว่าสิ่งสนับสนุนการเรียนรู้โดยรวมเอื้อต่อผลลัพธ์การเรียนรู้<br><br>
-      <strong>ผลกระทบสูงสุด:</strong> 7.5 ความปลอดภัย (4.21) และ 7.6 คุณภาพบุคลากร (4.14) — ส่งผลบวกโดยตรงต่อความพร้อมและประสิทธิภาพการเรียน<br><br>
-      <strong>⚠️ ความเสี่ยง:</strong> 7.4 ระบบ IT/Wi-Fi (3.89) เป็นหมวดที่มีคะแนนต่ำสุด ซึ่งในยุคการเรียนรู้ดิจิทัลส่งผลโดยตรงต่อการเข้าถึงทรัพยากรและ E-Learning<br><br>
-      <strong>ค่าเฉลี่ยผลกระทบต่อการเรียนรู้ (ข้อ 14–16):</strong> 4.13/5.00 — นักศึกษาเห็นว่าสิ่งสนับสนุนช่วยให้การเรียนมีประสิทธิภาพมากขึ้นในระดับมาก
+      <strong>ภาพรวม:</strong> ทุก 7 หมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน สะท้อนว่าสิ่งสนับสนุนการเรียนรู้โดยรวมเอื้อต่อผลลัพธ์การเรียนรู้<br><br>
+      <strong>จุดแข็ง:</strong> 7.5 ความปลอดภัย (4.21) และ 7.6 คุณภาพบุคลากร (4.12) — ส่งผลบวกโดยตรงต่อความพร้อมและประสิทธิภาพการเรียน<br><br>
+      <strong>⚠️ ความเสี่ยง:</strong> 7.4 ระบบ IT/Wi-Fi (3.87) และ 7.3 ห้องสมุด (3.88) มีคะแนนต่ำสุด ในยุคดิจิทัลส่งผลโดยตรงต่อการเข้าถึงทรัพยากรและ E-Learning<br><br>
+      <strong>ค่าเฉลี่ยผลกระทบต่อการเรียนรู้ (ข้อ 14–16):</strong> 4.12/5.00 — นักศึกษาเห็นว่าสิ่งสนับสนุนช่วยให้การเรียนมีประสิทธิภาพมากขึ้น
     </div>
   </div>
   <div class="cc">
     <h3>ระดับผลกระทบต่อการเรียนรู้รายหมวด</h3>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.5 สุขภาพและความปลอดภัย</div><div style="font-size:11px;color:#5a7aaa">สภาพแวดล้อมปลอดภัยส่งผลต่อความพร้อมในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.21</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.6 คุณภาพการให้บริการ</div><div style="font-size:11px;color:#5a7aaa">บุคลากรสนับสนุนการเข้าถึงทรัพยากรอย่างมีประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.14</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.7 ระบบรับข้อเสนอแนะ</div><div style="font-size:11px;color:#5a7aaa">การตอบสนองปัญหาส่งผลต่อความต่อเนื่องในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.09</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.1 อาคารและสิ่งอำนวยความสะดวก</div><div style="font-size:11px;color:#5a7aaa">ห้องเรียน พื้นที่เรียนรู้ ส่งผลต่อสมาธิและประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.05</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.2 ห้องปฏิบัติการและอุปกรณ์</div><div style="font-size:11px;color:#5a7aaa">อุปกรณ์ปฏิบัติการส่งผลโดยตรงต่อทักษะวิชาชีพ (PLO)</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.04</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#dcfce7">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.3 ทรัพยากรห้องสมุด</div><div style="font-size:11px;color:#5a7aaa">แหล่งเรียนรู้สนับสนุนการค้นคว้าและการคิดวิเคราะห์</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">3.96</div></div>
-    <div class="impact-row"><div class="impact-icon" style="background:#fef3c7">🟡</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.4 ระบบเทคโนโลยีสารสนเทศ</div><div style="font-size:11px;color:#5a7aaa">Wi-Fi และระบบ IT ส่งผลต่อการเรียนออนไลน์และการเข้าถึงทรัพยากร</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#d97706">3.89</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.5 สุขภาพและความปลอดภัย</div><div style="font-size:11px;color:#5a7aaa">สภาพแวดล้อมปลอดภัยส่งผลต่อความพร้อมในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.21</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.6 คุณภาพการให้บริการ</div><div style="font-size:11px;color:#5a7aaa">บุคลากรสนับสนุนการเข้าถึงทรัพยากรอย่างมีประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.12</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.1 อาคารและสิ่งอำนวยความสะดวก</div><div style="font-size:11px;color:#5a7aaa">ห้องเรียนและพื้นที่ส่งผลต่อสมาธิและประสิทธิภาพ</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.05</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.7 ระบบรับข้อเสนอแนะ</div><div style="font-size:11px;color:#5a7aaa">การตอบสนองปัญหาส่งผลต่อความต่อเนื่องในการเรียนรู้</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.05</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟢</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.2 ห้องปฏิบัติการและอุปกรณ์</div><div style="font-size:11px;color:#5a7aaa">อุปกรณ์ปฏิบัติการส่งผลโดยตรงต่อทักษะวิชาชีพ (PLO)</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#16a34a">4.04</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e8eef8"><div style="width:32px;height:32px;border-radius:8px;background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟡</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.3 ทรัพยากรห้องสมุด</div><div style="font-size:11px;color:#5a7aaa">แหล่งเรียนรู้สนับสนุนการค้นคว้าและการคิดวิเคราะห์</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#d97706">3.88</div></div>
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 0"><div style="width:32px;height:32px;border-radius:8px;background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🟡</div><div style="flex:1"><div style="font-size:12.5px;font-weight:500">7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</div><div style="font-size:11px;color:#5a7aaa">Wi-Fi และระบบ IT ส่งผลต่อการเรียนออนไลน์และการเข้าถึงทรัพยากร</div></div><div style="font-family:Kanit,sans-serif;font-size:16px;font-weight:700;color:#d97706">3.87</div></div>
   </div>
-  <div class="cc"><h3>กราฟเปรียบเทียบ</h3><div class="cw"><canvas id="impactChart"></canvas></div></div>
+  <div class="cc"><h3>กราฟเปรียบเทียบคะแนน vs เกณฑ์ขั้นต่ำ</h3><div class="cw"><canvas id="impactChart"></canvas></div></div>
 </div>
 
 <!-- PRIORITY -->
@@ -197,72 +187,52 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
   <div class="rh"><h2>⚠️ สิ่งสนับสนุนที่ต้องได้รับการแก้ไข (Priority Matrix)</h2></div>
   <div class="ai-box">
     <h4>📊 การจัดลำดับความเร่งด่วน</h4>
-    <div class="ai-content"><strong>✅ ไม่มีรายการวิกฤต</strong> — ทุกหมวดผ่านเกณฑ์ 3.50 แต่ <strong>7.4 ระบบ IT/Wi-Fi</strong> มีคะแนนต่ำสุด (3.89) และเป็นหมวดที่ผู้ตอบแบบสอบถามเลือกให้ปรับปรุงมากที่สุด (ระบบอินเทอร์เน็ต 166 คน จาก 248 คน = 67%) ควรดำเนินการเร่งด่วน</div>
+    <div class="ai-content"><strong>✅ ไม่มีรายการวิกฤต</strong> — ทุกหมวดผ่านเกณฑ์ 3.50 แต่ <strong>7.4 ระบบ IT/Wi-Fi (3.87)</strong> มีคะแนนต่ำสุดและเป็นสิ่งที่ผู้ตอบต้องการปรับปรุงมากที่สุด (299 คน = 68%) ควรดำเนินการเร่งด่วนที่สุด รองลงมาคือ <strong>7.3 ทรัพยากรห้องสมุด (3.88)</strong></div>
   </div>
   <div class="pm-grid">
-    <div class="pm-card critical">
-      <div class="pm-title">🔴 เร่งด่วน — ผลกระทบสูง+คะแนนต่ำ</div>
-      <div style="font-size:10.5px;color:#666;margin-bottom:6px">ต้องดำเนินการทันที</div>
-      <div class="pm-item">7.4 IT/Wi-Fi (3.89) — ผู้ตอบ 67% ต้องการปรับปรุง</div>
-    </div>
-    <div class="pm-card maintain">
-      <div class="pm-title">🟢 รักษาระดับ — จุดแข็ง</div>
-      <div style="font-size:10.5px;color:#666;margin-bottom:6px">คงระดับและพัฒนาต่อเนื่อง</div>
-      <div class="pm-item">7.5 Safety (4.21)</div>
-      <div class="pm-item">7.6 Staff (4.14)</div>
-      <div class="pm-item">7.7 Feedback (4.09)</div>
-    </div>
-    <div class="pm-card monitor">
-      <div class="pm-title">🟡 ติดตาม — พัฒนาต่อ</div>
-      <div style="font-size:10.5px;color:#666;margin-bottom:6px">วางแผนปรับปรุงระยะกลาง</div>
-      <div class="pm-item">7.3 Library (3.96)</div>
-    </div>
-    <div class="pm-card review">
-      <div class="pm-title">🔵 ทบทวน — มาตรฐานดี</div>
-      <div style="font-size:10.5px;color:#666;margin-bottom:6px">รักษาและพัฒนาอย่างต่อเนื่อง</div>
-      <div class="pm-item">7.1 Physical (4.05)</div>
-      <div class="pm-item">7.2 Labs (4.04)</div>
-    </div>
+    <div class="pm-card critical"><div class="pm-title">🔴 เร่งด่วน — ต้องดำเนินการทันที</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">คะแนนต่ำ + ผู้ตอบต้องการปรับปรุงสูง</div><div class="pm-item">7.4 IT/Wi-Fi (3.87) — 299 คน (68%) ต้องการปรับปรุง</div></div>
+    <div class="pm-card maintain"><div class="pm-title">🟢 รักษาระดับ — จุดแข็ง</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">คะแนนสูง รักษาและพัฒนาต่อเนื่อง</div><div class="pm-item">7.5 Safety (4.21)</div><div class="pm-item">7.6 Staff (4.12)</div><div class="pm-item">7.1 Physical (4.05)</div><div class="pm-item">7.7 Feedback (4.05)</div></div>
+    <div class="pm-card monitor"><div class="pm-title">🟡 ติดตาม — พัฒนาต่อ</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">คะแนนต่ำกว่าค่าเฉลี่ย ต้องวางแผนปรับปรุง</div><div class="pm-item">7.3 Library (3.88)</div></div>
+    <div class="pm-card review"><div class="pm-title">🔵 ทบทวน — มาตรฐานดี</div><div style="font-size:10.5px;color:#666;margin-bottom:6px">คะแนนดี รักษาอย่างต่อเนื่อง</div><div class="pm-item">7.2 Labs (4.04)</div></div>
   </div>
-  <div class="cc"><h3>สิ่งที่ผู้ตอบต้องการให้ปรับปรุงมากที่สุด (เลือกได้มากกว่า 1 ข้อ)</h3>
-    <div class="improve-bar"><div class="improve-label">ระบบอินเทอร์เน็ต</div><div class="improve-track"><div class="improve-fill" style="width:100%"></div></div><div class="improve-count">166</div></div>
-    <div class="improve-bar"><div class="improve-label">ความสะอาดและสิ่งแวดล้อม</div><div class="improve-track"><div class="improve-fill" style="width:45%"></div></div><div class="improve-count">74</div></div>
-    <div class="improve-bar"><div class="improve-label">ห้องเรียน</div><div class="improve-track"><div class="improve-fill" style="width:40%"></div></div><div class="improve-count">66</div></div>
-    <div class="improve-bar"><div class="improve-label">การบริการของเจ้าหน้าที่</div><div class="improve-track"><div class="improve-fill" style="width:33%"></div></div><div class="improve-count">54</div></div>
-    <div class="improve-bar"><div class="improve-label">ความปลอดภัยในอาคาร</div><div class="improve-track"><div class="improve-fill" style="width:32%"></div></div><div class="improve-count">53</div></div>
-    <div class="improve-bar"><div class="improve-label">ห้องปฏิบัติการ</div><div class="improve-track"><div class="improve-fill" style="width:28%"></div></div><div class="improve-count">47</div></div>
-    <div class="improve-bar"><div class="improve-label">ระบบแจ้งซ่อม</div><div class="improve-track"><div class="improve-fill" style="width:21%"></div></div><div class="improve-count">35</div></div>
-    <div class="improve-bar"><div class="improve-label">ห้องสมุด</div><div class="improve-track"><div class="improve-fill" style="width:16%"></div></div><div class="improve-count">27</div></div>
+  <div class="cc"><h3>สิ่งที่ผู้ตอบต้องการให้ปรับปรุงมากที่สุด (N=439, เลือกได้มากกว่า 1 ข้อ)</h3>
+    <div class="improve-bar"><div class="improve-label">ระบบอินเทอร์เน็ต</div><div class="improve-track"><div class="improve-fill" style="width:100%"></div></div><div class="improve-count">299</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องเรียน</div><div class="improve-track"><div class="improve-fill" style="width:38%"></div></div><div class="improve-count">115</div></div>
+    <div class="improve-bar"><div class="improve-label">ความสะอาดและสิ่งแวดล้อม</div><div class="improve-track"><div class="improve-fill" style="width:36%"></div></div><div class="improve-count">108</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องปฏิบัติการ</div><div class="improve-track"><div class="improve-fill" style="width:29%"></div></div><div class="improve-count">88</div></div>
+    <div class="improve-bar"><div class="improve-label">การบริการของเจ้าหน้าที่</div><div class="improve-track"><div class="improve-fill" style="width:28%"></div></div><div class="improve-count">85</div></div>
+    <div class="improve-bar"><div class="improve-label">ความปลอดภัยในอาคาร</div><div class="improve-track"><div class="improve-fill" style="width:27%"></div></div><div class="improve-count">82</div></div>
+    <div class="improve-bar"><div class="improve-label">ระบบแจ้งซ่อม</div><div class="improve-track"><div class="improve-fill" style="width:20%"></div></div><div class="improve-count">60</div></div>
+    <div class="improve-bar"><div class="improve-label">ห้องสมุด</div><div class="improve-track"><div class="improve-fill" style="width:18%"></div></div><div class="improve-count">53</div></div>
   </div>
   <div class="cc"><h3>ตารางลำดับความสำคัญ</h3>
     <table class="tt"><thead><tr><th>ลำดับ</th><th>หมวด</th><th>คะแนน</th><th>ระดับเร่งด่วน</th><th>การดำเนินการที่แนะนำ</th></tr></thead>
     <tbody>
-      <tr><td><strong>1</strong></td><td>7.4 ระบบ IT/Wi-Fi</td><td><strong>3.89</strong></td><td><span class="bdg br">เร่งด่วน</span></td><td style="font-size:11px">แก้ไขจุดอับสัญญาณ อัปเกรดระบบเครือข่าย</td></tr>
-      <tr><td><strong>2</strong></td><td>7.3 ห้องสมุด</td><td><strong>3.96</strong></td><td><span class="bdg ba">ติดตาม</span></td><td style="font-size:11px">เพิ่มฐานข้อมูลออนไลน์ ขยายเวลาให้บริการ</td></tr>
-      <tr><td><strong>3</strong></td><td>7.2 ห้องปฏิบัติการ</td><td><strong>4.04</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">ตรวจสอบซ่อมบำรุงอุปกรณ์ประจำปี</td></tr>
-      <tr><td><strong>4</strong></td><td>7.1 อาคาร</td><td><strong>4.05</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">บำรุงรักษาความสะอาดและความสว่าง</td></tr>
-      <tr><td><strong>5</strong></td><td>7.7 ระบบแจ้งซ่อม</td><td><strong>4.09</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">กำหนด SLA การตอบสนอง 72 ชั่วโมง</td></tr>
-      <tr><td><strong>6</strong></td><td>7.6 คุณภาพบุคลากร</td><td><strong>4.14</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">จัดอบรมเพิ่มทักษะการบริการรายปี</td></tr>
-      <tr><td><strong>7</strong></td><td>7.5 ความปลอดภัย</td><td><strong>4.21</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">ทบทวนแผนฉุกเฉินประจำปีการศึกษา</td></tr>
+      <tr><td><strong>1</strong></td><td>7.4 ระบบ IT/Wi-Fi</td><td><strong>3.87</strong></td><td><span class="bdg br">เร่งด่วน</span></td><td style="font-size:11px">แก้ไขสัญญาณ Wi-Fi อัปเกรดระบบเครือข่าย</td></tr>
+      <tr><td><strong>2</strong></td><td>7.3 ห้องสมุด</td><td><strong>3.88</strong></td><td><span class="bdg ba">ติดตาม</span></td><td style="font-size:11px">เพิ่มฐานข้อมูลออนไลน์ ขยายเวลาบริการ</td></tr>
+      <tr><td><strong>3</strong></td><td>7.2 ห้องปฏิบัติการ</td><td><strong>4.04</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">ซ่อมบำรุงอุปกรณ์ เพิ่มคอมพิวเตอร์</td></tr>
+      <tr><td><strong>4</strong></td><td>7.1 อาคาร</td><td><strong>4.05</strong></td><td><span class="bdg bb">ทบทวน</span></td><td style="font-size:11px">ความสะอาด ปลั๊กไฟ ที่จอดรถ</td></tr>
+      <tr><td><strong>5</strong></td><td>7.7 ระบบแจ้งซ่อม</td><td><strong>4.05</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">กำหนด SLA ตอบสนอง 72 ชั่วโมง</td></tr>
+      <tr><td><strong>6</strong></td><td>7.6 คุณภาพบุคลากร</td><td><strong>4.12</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">อบรมทักษะการบริการรายปี</td></tr>
+      <tr><td><strong>7</strong></td><td>7.5 ความปลอดภัย</td><td><strong>4.21</strong></td><td><span class="bdg bg">รักษาระดับ</span></td><td style="font-size:11px">ทบทวนแผนฉุกเฉินประจำปี</td></tr>
     </tbody></table>
   </div>
 </div>
-
 <!-- ACTION PLAN -->
 <div id="pane-action" class="pn">
-  <div class="rh"><h2>📌 แผนพัฒนาและปรับปรุง</h2><button class="btn bp" onclick="copyAction()">📋 Export แผน</button></div>
+  <div class="rh"><h2>📌 แผนพัฒนาและปรับปรุง</h2><button class="btn bp" onclick="copyText('action-content')">📋 Export แผน</button></div>
   <div class="ai-box">
     <h4>📊 ข้อเสนอแนะเชิงนโยบายจากผลการประเมิน</h4>
-    <div class="ai-content">จากผลการประเมิน 248 คน ควรให้ความสำคัญกับการพัฒนา <strong>ระบบ IT/Wi-Fi</strong> เป็นลำดับแรก เนื่องจากผู้ตอบ 67% เลือกให้ปรับปรุง ควรบรรจุในแผนปฏิบัติการประจำปีพร้อมงบประมาณและผู้รับผิดชอบที่ชัดเจน รายงานความคืบหน้าต่อคณะกรรมการ AUN-QA ในรอบถัดไป</div>
+    <div class="ai-content">จากผลการประเมิน 439 คน ควรให้ความสำคัญกับการพัฒนา <strong>ระบบ IT/Wi-Fi</strong> เป็นลำดับแรก เนื่องจากผู้ตอบ 68% เลือกให้ปรับปรุง ควรบรรจุในแผนปฏิบัติการประจำปีพร้อมงบประมาณ รายงานต่อคณะกรรมการ AUN-QA ในรอบถัดไป</div>
   </div>
   <div id="action-content">
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</div><span class="bdg br">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> แก้ไขจุดอับสัญญาณ Wi-Fi ในพื้นที่เรียน ตรวจสอบ Access Point ทุกจุด<br><strong>แผนระยะกลาง:</strong> อัปเกรดระบบเครือข่ายให้รองรับการใช้งานพร้อมกันไม่น้อยกว่า 300 อุปกรณ์</div><div class="ap-meta"><span class="ap-tag">👤 ศูนย์คอมพิวเตอร์/IT</span><span class="ap-tag">📅 เร่งด่วน ภายใน 2 สัปดาห์</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.1 อาคารและสิ่งอำนวยความสะดวก (ความสะอาด)</div><span class="bdg ba">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำทุกชั้น กำหนดรอบทำความสะอาดชัดเจน แก้ไขปัญหากลิ่นและความสะอาดห้องน้ำชั้น 1 และ 3<br><strong>แผนระยะกลาง:</strong> ติดตั้งระบบลงทะเบียนทำความสะอาด จัดทำป้ายรายงานเวลาทำความสะอาดล่าสุด</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายอาคารสถานที่</span><span class="ap-tag">📅 ภายใน 1 สัปดาห์</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.3 ทรัพยากรห้องสมุด</div><span class="bdg bb">ติดตาม</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มการเข้าถึงฐานข้อมูลออนไลน์และ e-Book<br><strong>แผนระยะกลาง:</strong> ขยายชั่วโมงให้บริการห้องสมุดให้ครอบคลุมมากขึ้น</div><div class="ap-meta"><span class="ap-tag">👤 สำนักวิทยบริการ</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.2 ห้องปฏิบัติการและอุปกรณ์</div><span class="bdg bb">ทบทวน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> ตรวจสอบและซ่อมบำรุงอุปกรณ์ชำรุด เพิ่มจำนวนคอมพิวเตอร์ให้เพียงพอต่อนักศึกษา<br><strong>แผนระยะกลาง:</strong> จัดทำแผนจัดหาอุปกรณ์ทันสมัยทดแทนประจำปี</div><div class="ap-meta"><span class="ap-tag">👤 คณะ/ภาควิชา</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.7 ระบบรับข้อเสนอแนะและซ่อมบำรุง</div><span class="bdg bg">ต่อเนื่อง</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> กำหนด SLA การตอบสนองปัญหาภายใน 72 ชั่วโมง<br><strong>แผนระยะกลาง:</strong> สร้างช่องทางรับข้อเสนอแนะออนไลน์ที่ใช้งานง่าย</div><div class="ap-meta"><span class="ap-tag">👤 คณะกรรมการประกันคุณภาพ</span><span class="ap-tag">📅 ภายในเดือนนี้</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.6 คุณภาพการให้บริการ</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> จัดอบรมเพิ่มทักษะการบริการรายปี ประเมินความพึงพอใจบุคลากรรายไตรมาส</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายบุคลากร</span><span class="ap-tag">📅 ประจำปีการศึกษา</span></div></div>
-    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.5 สุขภาพและความปลอดภัย</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> ทบทวนแผนฉุกเฉินและความปลอดภัย จัดอบรมนักศึกษาประจำปี</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายความปลอดภัย</span><span class="ap-tag">📅 ต้นปีการศึกษา</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</div><span class="bdg br">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> แก้ไขจุดอับสัญญาณ Wi-Fi ในพื้นที่เรียน ตรวจสอบ Access Point ทุกจุด (ผู้ตอบ 299 คน ร้องเรียน)<br><strong>แผนระยะกลาง:</strong> อัปเกรดระบบเครือข่ายรองรับ 500+ อุปกรณ์พร้อมกัน เพิ่มจุดปริ้นเอกสารและปลั๊กไฟในพื้นที่ทำงานกลุ่ม</div><div class="ap-meta"><span class="ap-tag">👤 ศูนย์คอมพิวเตอร์/IT</span><span class="ap-tag">📅 เร่งด่วน ภายใน 2 สัปดาห์</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.1 อาคาร — ความสะอาดและสิ่งอำนวยความสะดวก</div><span class="bdg ba">เร่งด่วน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำทุกชั้น แก้ไขปัญหากลิ่นบุหรี่ในห้องน้ำ ซ่อมก้อกน้ำชำรุด<br><strong>แผนระยะกลาง:</strong> เพิ่มปลั๊กไฟที่เสาบริเวณพื้นที่ทำงานกลุ่ม จัดพื้นที่จอดรถให้เพียงพอ พัฒนา Co-working Space</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายอาคารสถานที่</span><span class="ap-tag">📅 ภายใน 1 สัปดาห์</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.3 ทรัพยากรห้องสมุด</div><span class="bdg bb">ติดตาม</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> เพิ่มการเข้าถึงฐานข้อมูลออนไลน์และ e-Book<br><strong>แผนระยะกลาง:</strong> ขยายชั่วโมงบริการห้องสมุด จัดหาหนังสือตรงกับความต้องการหลักสูตร</div><div class="ap-meta"><span class="ap-tag">👤 สำนักวิทยบริการ</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.2 ห้องปฏิบัติการและอุปกรณ์</div><span class="bdg bb">ทบทวน</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> ตรวจสอบและซ่อมอุปกรณ์ชำรุด ปรับปรุงระบบเสียงในห้องเรียนที่ชำรุด เพิ่มจำนวนคอมพิวเตอร์<br><strong>แผนระยะกลาง:</strong> เพิ่มการเข้าถึงอุปกรณ์กล้องและสื่อการเรียนรู้สำหรับนักศึกษา</div><div class="ap-meta"><span class="ap-tag">👤 คณะ/ภาควิชา</span><span class="ap-tag">📅 ภาคการศึกษาถัดไป</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.7 ระบบรับข้อเสนอแนะและซ่อมบำรุง</div><span class="bdg bg">ต่อเนื่อง</span></div><div class="ap-body"><strong>ดำเนินการทันที:</strong> กำหนด SLA ตอบสนองปัญหาภายใน 72 ชั่วโมง<br><strong>แผนระยะกลาง:</strong> ปรับปรุงเว็บไซต์คณะให้ทันสมัย สร้างช่องทางรับข้อเสนอแนะออนไลน์ที่ใช้งานง่าย</div><div class="ap-meta"><span class="ap-tag">👤 คณะกรรมการประกันคุณภาพ</span><span class="ap-tag">📅 ภายในเดือนนี้</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.6 คุณภาพการให้บริการ</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> อบรมเพิ่มทักษะการบริการรายปี ประเมินความพึงพอใจบุคลากรรายไตรมาส</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายบุคลากร</span><span class="ap-tag">📅 ประจำปีการศึกษา</span></div></div>
+    <div class="ap-row"><div class="ap-head"><div class="ap-cat">7.5 สุขภาพและความปลอดภัย</div><span class="bdg bg">รักษาระดับ</span></div><div class="ap-body"><strong>ดำเนินการต่อเนื่อง:</strong> ทบทวนแผนฉุกเฉิน จัดอบรมนักศึกษาประจำปี ติดตั้งป้ายงดสูบบุหรี่แบบเด็ดขาด</div><div class="ap-meta"><span class="ap-tag">👤 ฝ่ายความปลอดภัย</span><span class="ap-tag">📅 ต้นปีการศึกษา</span></div></div>
   </div>
 </div>
 
@@ -270,21 +240,23 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 <div id="pane-suggest" class="pn">
   <div class="rh"><h2>💬 ข้อเสนอแนะจากผู้ตอบแบบสอบถาม</h2></div>
   <div class="ai-box">
-    <h4>📊 สรุปประเด็นหลักจากข้อเสนอแนะ (18 รายการ)</h4>
+    <h4>📊 สรุปประเด็นหลักจากข้อเสนอแนะ (27 รายการ)</h4>
     <div class="ai-content">
       <strong>ประเด็นที่พบบ่อยที่สุด:</strong><br>
-      • <strong>ห้องน้ำ</strong> — กลิ่นไม่พึงประสงค์ ความสะอาด มีการสูบบุหรี่ในห้องน้ำ (พบใน 7 รายการ)<br>
-      • <strong>Wi-Fi/อินเทอร์เน็ต</strong> — สัญญาณล่มบ่อย ไม่เสถียร (พบใน 1 รายการ)<br>
-      • <strong>ปลั๊กไฟ/สิ่งอำนวยความสะดวก</strong> — ปลั๊กไฟไม่เพียงพอในพื้นที่ทำงานกลุ่ม (พบใน 2 รายการ)<br><br>
-      <strong>ข้อเสนอแนะเชิงบวก:</strong> มีผู้ตอบแสดงความพึงพอใจโดยรวม เช่น "ดีมาก" "ดีค่ะ" "เรียนดีและสนุก"
+      • <strong>Wi-Fi/อินเทอร์เน็ต</strong> — ล่มบ่อย ช้า ไม่เสถียร ไม่ทั่วถึง (7 รายการ)<br>
+      • <strong>ห้องน้ำ</strong> — กลิ่นบุหรี่ สกปรก ก้อกน้ำชำรุด (6 รายการ)<br>
+      • <strong>ปลั๊กไฟ/พื้นที่ทำงาน</strong> — ปลั๊กไม่เพียงพอ ต้องการ Co-working Space และจุดปริ้นเอกสาร (4 รายการ)<br>
+      • <strong>อุปกรณ์/สื่อการเรียนรู้</strong> — ระบบเสียงชำรุด กล้อง อุปกรณ์เข้าไม่ถึง (2 รายการ)<br><br>
+      <strong>ข้อเสนอแนะเชิงบวก:</strong> "ดีมาก" "เรียนดีและสนุก" "เป็นอาคารที่ดีมาก" (5 รายการ)
     </div>
   </div>
   <div class="cc">
-    <h3>ข้อเสนอแนะทั้งหมด (18 รายการ)</h3>
+    <h3>ข้อเสนอแนะทั้งหมด (27 รายการ)</h3>
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
-      <span class="theme-chip active" style="background:#eff6ff;color:#1a4fa8" onclick="filterSuggest('all',this)">ทั้งหมด (18)</span>
-      <span class="theme-chip" style="background:#fee2e2;color:#dc2626" onclick="filterSuggest('toilet',this)">🚽 ห้องน้ำ (7)</span>
-      <span class="theme-chip" style="background:#fef3c7;color:#d97706" onclick="filterSuggest('wifi',this)">🌐 Wi-Fi (1)</span>
+      <span class="theme-chip active" style="background:#eff6ff;color:#1a4fa8" onclick="filterSuggest('all',this)">ทั้งหมด (27)</span>
+      <span class="theme-chip" style="background:#fef3c7;color:#d97706" onclick="filterSuggest('wifi',this)">🌐 Wi-Fi/เน็ต (7)</span>
+      <span class="theme-chip" style="background:#fee2e2;color:#dc2626" onclick="filterSuggest('toilet',this)">🚽 ห้องน้ำ (6)</span>
+      <span class="theme-chip" style="background:#dbeafe;color:#1a4fa8" onclick="filterSuggest('facility',this)">🔌 สิ่งอำนวยความสะดวก (4)</span>
       <span class="theme-chip" style="background:#dcfce7;color:#16a34a" onclick="filterSuggest('good',this)">👍 เชิงบวก (5)</span>
     </div>
     <div id="suggest-list"></div>
@@ -293,66 +265,67 @@ body{font-family:'Sarabun',sans-serif;background:#eef4ff;color:#0a2d5e}
 
 <!-- SAR -->
 <div id="pane-sar" class="pn">
-  <div class="rh"><h2>📄 รายงานผล SAR</h2><button class="btn bp" onclick="copySAR()">📋 คัดลอก</button></div>
+  <div class="rh"><h2>📄 รายงานผล SAR</h2><button class="btn bp" onclick="copyText('sar-body')">📋 คัดลอก</button></div>
   <div class="sbox">
     <div class="sband"><h2>รายงานผลการประเมินความพึงพอใจสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค</h2><p>AUN-QA Criterion 7 · คณะวิทยาการจัดการ มหาวิทยาลัยราชภัฏอุตรดิตถ์ · ปีการศึกษา 2568</p></div>
     <div class="sb" id="sar-body">
       <div class="st">1. บทนำ</div>
-      <p class="stx">คณะวิทยาการจัดการได้ดำเนินการสำรวจความพึงพอใจต่อสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค ตามเกณฑ์ AUN-QA Version 4.0 หมวดที่ 7: Learning Environment and Support Services มีผู้ตอบแบบสอบถามทั้งสิ้น 248 คน ประกอบด้วยนักศึกษา 231 คน (93.1%) อาจารย์ 11 คน (4.4%) และบุคลากรสายสนับสนุน 6 คน (2.4%) ในปีการศึกษา 2568</p>
+      <p class="stx">คณะวิทยาการจัดการได้ดำเนินการสำรวจความพึงพอใจต่อสิ่งสนับสนุนการเรียนรู้และสาธารณูปโภค ตามเกณฑ์ AUN-QA Version 4.0 หมวดที่ 7 มีผู้ตอบแบบสอบถามทั้งสิ้น <strong>439 คน</strong> ประกอบด้วยนักศึกษา 389 คน (88.6%) อาจารย์ 41 คน (9.3%) และบุคลากรสายสนับสนุน 9 คน (2.1%) ปีการศึกษา 2568</p>
       <div class="st">2. ผลการประเมินรายหมวด</div>
-      <p class="stx" style="margin-bottom:8px">ค่าเฉลี่ยรวม AUN-QA หมวด 7 อยู่ที่ <strong>4.07</strong> จาก 5.00 คะแนน (ระดับ<strong>มาก</strong>) และค่าเฉลี่ยความพึงพอใจโดยรวม (ข้อ 18) อยู่ที่ <strong>4.18</strong> คะแนน</p>
+      <p class="stx" style="margin-bottom:8px">ค่าเฉลี่ยรวม AUN-QA หมวด 7 อยู่ที่ <strong>4.03</strong> จาก 5.00 (ระดับ<strong>มาก</strong>) ความพึงพอใจโดยรวม (ข้อ 18) อยู่ที่ <strong>4.15</strong></p>
       <div class="sr best"><span>7.5 สุขภาพและความปลอดภัย</span><span><strong>4.21</strong> <span class="bdg bg">มาก</span></span></div>
-      <div class="sr"><span>7.6 คุณภาพการให้บริการ</span><span><strong>4.14</strong> <span class="bdg bg">มาก</span></span></div>
-      <div class="sr"><span>7.7 ระบบรับข้อเสนอแนะ</span><span><strong>4.09</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.6 คุณภาพการให้บริการ</span><span><strong>4.12</strong> <span class="bdg bg">มาก</span></span></div>
       <div class="sr"><span>7.1 อาคารและสิ่งอำนวยความสะดวก</span><span><strong>4.05</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr"><span>7.7 ระบบรับข้อเสนอแนะ</span><span><strong>4.05</strong> <span class="bdg bg">มาก</span></span></div>
       <div class="sr"><span>7.2 ห้องปฏิบัติการและอุปกรณ์</span><span><strong>4.04</strong> <span class="bdg bg">มาก</span></span></div>
-      <div class="sr"><span>7.3 ทรัพยากรห้องสมุด</span><span><strong>3.96</strong> <span class="bdg bg">มาก</span></span></div>
-      <div class="sr worst"><span>7.4 ระบบเทคโนโลยีสารสนเทศ</span><span><strong>3.89</strong> <span class="bdg bg">มาก</span></span></div>
-      <div class="st">3. ผลกระทบต่อผลลัพธ์การเรียนรู้ (Learning Outcomes)</div>
-      <p class="stx">ผู้ตอบแบบสอบถามประเมินว่าสิ่งสนับสนุนการเรียนรู้มีผลกระทบต่อประสิทธิภาพการเรียนรู้ในระดับมาก (ค่าเฉลี่ย 4.13/5.00) โดยทุกหมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน สะท้อนว่าสิ่งสนับสนุนการเรียนรู้โดยรวมเอื้อต่อการบรรลุผลลัพธ์การเรียนรู้ตามเป้าหมายหลักสูตร</p>
+      <div class="sr"><span>7.3 ทรัพยากรห้องสมุด</span><span><strong>3.88</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="sr worst"><span>7.4 ระบบเทคโนโลยีสารสนเทศ</span><span><strong>3.87</strong> <span class="bdg bg">มาก</span></span></div>
+      <div class="st">3. ผลกระทบต่อผลลัพธ์การเรียนรู้</div>
+      <p class="stx">ผู้ตอบแบบสอบถามประเมินว่าสิ่งสนับสนุนการเรียนรู้มีผลกระทบต่อประสิทธิภาพการเรียนรู้ในระดับมาก (ค่าเฉลี่ย 4.12/5.00) ทุก 7 หมวดผ่านเกณฑ์ขั้นต่ำ 3.50 สะท้อนว่าสิ่งสนับสนุนโดยรวมเอื้อต่อการบรรลุผลลัพธ์การเรียนรู้ตามเป้าหมายหลักสูตร</p>
       <div class="st">4. จุดแข็ง</div>
       <ul class="sl">
-        <li>ด้านที่มีคะแนนสูงสุด: <strong>7.5 สุขภาพและความปลอดภัย</strong> (4.21) — สภาพแวดล้อมปลอดภัย เอื้อต่อการเรียนรู้</li>
-        <li><strong>7.6 คุณภาพการให้บริการของบุคลากร</strong> (4.14) — บุคลากรให้บริการด้วยความสุภาพและมีความรู้ความสามารถ</li>
+        <li><strong>7.5 สุขภาพและความปลอดภัย (4.21)</strong> — สภาพแวดล้อมปลอดภัย เอื้อต่อการเรียนรู้</li>
+        <li><strong>7.6 คุณภาพการให้บริการ (4.12)</strong> — บุคลากรสุภาพ มีความรู้ความสามารถ</li>
         <li>ทุก 7 หมวดผ่านเกณฑ์ขั้นต่ำ 3.50 คะแนน</li>
       </ul>
-      <div class="st">5. จุดที่ต้องพัฒนาและสิ่งสนับสนุนที่ต้องได้รับการแก้ไข</div>
+      <div class="st">5. จุดที่ต้องพัฒนา</div>
       <ul class="sl">
-        <li><strong>7.4 ระบบเทคโนโลยีสารสนเทศและ Wi-Fi</strong> (3.89) — คะแนนต่ำสุด ผู้ตอบ 166 คน (67%) เลือกให้ปรับปรุงเป็นอันดับ 1</li>
-        <li><strong>ความสะอาดและสิ่งแวดล้อม</strong> — ผู้ตอบ 74 คน เสนอให้ปรับปรุง โดยเฉพาะห้องน้ำทุกชั้น</li>
-        <li><strong>7.3 ทรัพยากรห้องสมุด</strong> (3.96) — ควรเพิ่มการเข้าถึงฐานข้อมูลออนไลน์</li>
+        <li><strong>7.4 ระบบ IT/Wi-Fi (3.87)</strong> — คะแนนต่ำสุด ผู้ตอบ 299 คน (68%) ต้องการปรับปรุงเป็นอันดับ 1</li>
+        <li><strong>7.3 ห้องสมุด (3.88)</strong> — ควรเพิ่มฐานข้อมูลออนไลน์ ขยายเวลาบริการ</li>
+        <li>ความสะอาดห้องน้ำ กลิ่นบุหรี่ — ผู้ตอบ 108 คน เสนอให้ปรับปรุง</li>
       </ul>
       <div class="st">6. สรุปข้อเสนอแนะจากผู้ตอบ</div>
       <ul class="sl">
-        <li>ต้องการให้แก้ไขปัญหา Wi-Fi ล่มบ่อย — "ขอ Wi-Fi อย่าล่มบ่อย"</li>
-        <li>ต้องการให้เพิ่มปลั๊กไฟในพื้นที่ทำงานกลุ่มให้เพียงพอ</li>
-        <li>ห้องน้ำทุกชั้นมีปัญหาความสะอาดและกลิ่น ควรเร่งแก้ไข</li>
-        <li>ควรปรับปรุงเว็บไซต์ของคณะให้ทันสมัย</li>
-        <li>อยากให้มีพื้นที่ส่วนกลางสำหรับทำกิจกรรมเพิ่มขึ้น</li>
+        <li>"ขอ Wi-Fi อย่าล่มบ่อย" / "อินเตอร์เน็ตช้า ใช้งานไม่เสถียร ไม่ทั่วถึง" — ต้องการให้แก้ไขด่วนที่สุด</li>
+        <li>ห้องน้ำมีปัญหาความสะอาดและกลิ่นบุหรี่ทุกชั้น ต้องการให้เร่งแก้ไข</li>
+        <li>ต้องการปลั๊กไฟเพิ่มในพื้นที่ทำงานกลุ่ม และจุดปริ้นเอกสาร</li>
+        <li>ต้องการ Co-working Space ที่มีสิ่งอำนวยความสะดวกครบครัน</li>
+        <li>ระบบเสียงในห้องเรียนชำรุดบ่อย อุปกรณ์กล้องและสื่อการเรียนรู้เข้าไม่ถึง</li>
+        <li>ควรปรับปรุงเว็บไซต์คณะให้ทันสมัย จัดที่จอดรถให้เพียงพอ</li>
       </ul>
       <div class="st">7. แผนพัฒนา</div>
       <ul class="sl">
-        <li><strong>เร่งด่วน (ภายใน 2 สัปดาห์):</strong> แก้ไขจุดอับสัญญาณ Wi-Fi และระบบเครือข่าย</li>
-        <li><strong>เร่งด่วน (ภายใน 1 สัปดาห์):</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำ แก้ไขปัญหาห้องน้ำ</li>
-        <li><strong>ระยะกลาง:</strong> จัดหาอุปกรณ์ห้องปฏิบัติการทดแทน เพิ่มฐานข้อมูลห้องสมุด</li>
+        <li><strong>เร่งด่วน (ภายใน 2 สัปดาห์):</strong> แก้ไขระบบ Wi-Fi และเครือข่าย</li>
+        <li><strong>เร่งด่วน (ภายใน 1 สัปดาห์):</strong> เพิ่มความถี่ทำความสะอาดห้องน้ำ แก้ไขปัญหาบุหรี่</li>
+        <li><strong>ระยะกลาง:</strong> เพิ่มปลั๊กไฟ พัฒนา Co-working Space จุดปริ้นเอกสาร เพิ่มฐานข้อมูลห้องสมุด</li>
         <li><strong>ต่อเนื่อง:</strong> อบรมบุคลากร ทบทวนแผนความปลอดภัย ติดตามผลรายภาคการศึกษา</li>
       </ul>
     </div>
-    <div class="sa"><button class="btn bp" onclick="copySAR()">📋 คัดลอกรายงาน</button></div>
+    <div class="sa"><button class="btn bp" onclick="copyText('sar-body')">📋 คัดลอกรายงาน</button></div>
   </div>
 </div>
 
-</div>
+</div><!-- end wrap -->
 <div class="toast" id="toast">✅ สำเร็จ!</div>
 <script>
 const cats=[
-  {id:'7.1',name:'Physical',th:'อาคารและสิ่งอำนวยความสะดวก',avg:4.05},
-  {id:'7.2',name:'Labs',th:'ห้องปฏิบัติการ',avg:4.04},
-  {id:'7.3',name:'Library',th:'ห้องสมุด',avg:3.96},
-  {id:'7.4',name:'IT/Wi-Fi',th:'ระบบ IT',avg:3.89},
-  {id:'7.5',name:'Safety',th:'ความปลอดภัย',avg:4.21},
-  {id:'7.6',name:'Staff',th:'คุณภาพบุคลากร',avg:4.14},
-  {id:'7.7',name:'Feedback',th:'ระบบแจ้งซ่อม',avg:4.09}
+  {id:'7.1',name:'Physical',avg:4.05},
+  {id:'7.2',name:'Labs',avg:4.04},
+  {id:'7.3',name:'Library',avg:3.88},
+  {id:'7.4',name:'IT/Wi-Fi',avg:3.87},
+  {id:'7.5',name:'Safety',avg:4.21},
+  {id:'7.6',name:'Staff',avg:4.12},
+  {id:'7.7',name:'Feedback',avg:4.05}
 ];
 
 const suggestions=[
@@ -363,16 +336,26 @@ const suggestions=[
   {text:'เรียนดีและสนุก',type:'good'},
   {text:'ขอ Wi-Fi อย่าล่มบ่อย',type:'wifi'},
   {text:'อยากให้ทำความสะอาดห้องน้ำชั้น 1 ให้สะอาดมากขึ้น เหม็นมาก',type:'toilet'},
-  {text:'อยากให้มีปลั๊กที่เสาเพิ่ม เนื่องจากบางครั้งไม่เพียงพอต่อนักศึกษาที่มาทำงานกลุ่มใต้ตึกคณะ อยากให้มีปลั๊กทั้งสองฝั่ง',type:'other'},
-  {text:'อยากให้มีปลั๊กที่เสาอีกฝั่งเพิ่ม ถ้าเป็นไปได้ จะได้ไม่แย่งกันใช้ เพราะบางทีมันไม่เพียงพอ',type:'other'},
-  {text:'ห้องน้ำชั้น 4 น้ำไหลเบามาก ส่วนห้องน้ำหลังเวทีสกปรก ส่งกลิ่นเหม็น ไม่ค่อยสะอาด บางห้องที่ฉีดก็ชำรุด',type:'toilet'},
-  {text:'อยากให้มีพื้นที่ส่วนกลางมากกว่านี้',type:'other'},
+  {text:'อยากให้มีปลั๊กที่เสาเพิ่มเนื่องจากบางครั้งไม่เพียงพอต่อนักศึกษาที่มาทำงานกลุ่มใต้ตึกคณะ อยากให้มีปลั๊กทั้งสองฝั่ง',type:'facility'},
+  {text:'อยากให้มีปลั๊กที่เสาอีกฝั่งเพิ่ม จะได้ไม่แย่งกันใช้ เพราะบางทีมันไม่เพียงพอ',type:'facility'},
+  {text:'ห้องน้ำชั้น 4 น้ำไหลเบามาก ส่วนห้องน้ำหลังเวทีสกปรก ส่งกลิ่นเหม็น บางห้องที่ฉีดก็ชำรุด',type:'toilet'},
+  {text:'อยากให้มีพื้นที่ส่วนกลางมากกว่านี้',type:'facility'},
   {text:'ดีมาก',type:'good'},
-  {text:'ห้องน้ำทั้งห้องน้ำชายและหญิง กลิ่นบุหรี่คือที่สุด เหม็นมาก ช่วยแก้ไขปัญหาเรื่องนี้หน่อยค่ะ เป็นภัยต่อทุกคนมาก',type:'toilet'},
+  {text:'ห้องน้ำทั้งชายและหญิง กลิ่นบุหรี่คือที่สุด เหม็นมาก ช่วยแก้ไขปัญหาเรื่องนี้หน่อยค่ะ เป็นภัยต่อทุกคนมาก',type:'toilet'},
   {text:'ดีค่ะ ยกเว้นห้องคอมที่แม่บ้านไม่กวาด',type:'good'},
-  {text:'ดีครับ',type:'good'},
-  {text:'ห้องน้ำมีคนสูบบุหรี่ ควรปรับปรุงในด้านนี้',type:'toilet'},
-  {text:'ทำความสะอาดห้องเรียนด้วยค่ะ เรียนทีไรเส้นผมมุมเดิมยังมีอยู่เลยค่ะ พวกห้องคอมควรกวาดให้สะอาด',type:'toilet'}
+  {text:'ระบบเครื่องเสียงในห้องเรียนชำรุดบ่อยๆ',type:'other'},
+  {text:'ควรมีวิธีกำจัดกลิ่นบุหรี่ให้ดีกว่านี้',type:'toilet'},
+  {text:'อยากให้จัดพื้นที่สำหรับที่จอดรถของทุกคณะให้เพียงพอ',type:'facility'},
+  {text:'ควรจัด Co-working Space ที่มีสิ่งอำนวยความสะดวกให้นักศึกษาเพิ่มเติม',type:'facility'},
+  {text:'เน็ตไม่ค่อยดี',type:'wifi'},
+  {text:'เป็นอาคารที่ดีมาก',type:'good'},
+  {text:'อยากให้เน็ตเสถียรและเร็วขึ้น',type:'wifi'},
+  {text:'ทำ Wi-Fi ให้ดีกว่านี้หน่อย ใช้แทบไม่ได้เลย ใช้ในการทำงานก็ยังไม่ดีขนาดนั้น',type:'wifi'},
+  {text:'เหม็นบุหรี่ในห้องน้ำ ก้อกน้ำเปลี่ยนหน่อย บางอันก็ไม่ไหล',type:'toilet'},
+  {text:'อยากให้มีจุดสำหรับพิมพ์งานที่ใช้ไฟได้ เก้าอี้ที่นั่งพักผ่อนหลายจุด รวมถึงจุดปริ้นเอกสารที่นักศึกษาสามารถปริ้นได้สะดวก',type:'facility'},
+  {text:'อินเตอร์เน็ตช้า ใช้งานไม่เสถียร ไม่ทั่วถึง',type:'wifi'},
+  {text:'อยากให้อุปกรณ์เช่นกล้องหรืออุปกรณ์ต่างๆมีการเข้าถึงนักศึกษาหรือคาบเรียนให้มากกว่านี้',type:'other'},
+  {text:'อยากให้เน็ตเสถียร ใช้งานได้เร็วและทั่วถึงทุกพื้นที่',type:'wifi'}
 ];
 
 function filterSuggest(type,el){
@@ -394,11 +377,8 @@ function go(id,el){
   if(id==='suggest')filterSuggest('all',document.querySelector('.theme-chip'));
 }
 
-function copySAR(){
-  navigator.clipboard.writeText(document.getElementById('sar-body').innerText).then(()=>showToast('📋 คัดลอกรายงานแล้ว!'));
-}
-function copyAction(){
-  navigator.clipboard.writeText(document.getElementById('action-content').innerText).then(()=>showToast('📋 คัดลอกแผนพัฒนาแล้ว!'));
+function copyText(id){
+  navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>showToast('📋 คัดลอกแล้ว!'));
 }
 function showToast(msg){
   const t=document.getElementById('toast');
@@ -418,13 +398,11 @@ function initCharts(){
 }
 function initImpactChart(){
   if(IC)IC.destroy();
-  IC=new Chart(document.getElementById('impactChart'),{type:'bar',data:{labels:cats.map(c=>c.id),datasets:[{label:'ค่าเฉลี่ยความพึงพอใจ',data:cats.map(c=>c.avg),backgroundColor:'rgba(37,99,235,0.7)',borderRadius:4},{label:'เกณฑ์ขั้นต่ำ AUN-QA (3.50)',data:cats.map(()=>3.5),type:'line',borderColor:'#dc2626',borderDash:[5,5],pointRadius:0,borderWidth:1.5}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12}}},scales:{y:{min:3,max:5,ticks:{font:{size:10},color:'#5a7aaa'}},x:{ticks:{font:{size:10},color:'#5a7aaa'}}}}});
+  IC=new Chart(document.getElementById('impactChart'),{type:'bar',data:{labels:cats.map(c=>c.id),datasets:[{label:'ค่าเฉลี่ยความพึงพอใจ',data:cats.map(c=>c.avg),backgroundColor:'rgba(37,99,235,0.7)',borderRadius:4},{label:'เกณฑ์ขั้นต่ำ AUN-QA (3.50)',data:cats.map(()=>3.5),type:'line',borderColor:'#dc2626',borderDash:[5,5],pointRadius:0,borderWidth:1.5,backgroundColor:'transparent'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12}}},scales:{y:{min:3,max:5,ticks:{font:{size:10},color:'#5a7aaa'}},x:{ticks:{font:{size:10},color:'#5a7aaa'}}}}});
 }
 
-// Init
 filterSuggest('all',document.querySelector('.theme-chip'));
 setTimeout(initCharts,150);
 </script>
 </body>
 </html>
-
